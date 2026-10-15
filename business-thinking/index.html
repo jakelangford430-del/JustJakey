@@ -483,15 +483,25 @@
         output.hidden = false;
         output.scrollIntoView({ behavior: "smooth", block: "nearest" });
       }));
+      const SAVE_PREFIX = "just-jakey-";
+      const OLD_SAVE_PREFIX = "lets-sort-it-out-";
+      const readSaved = (key, oldKey) => {
+        let value = localStorage.getItem(key);
+        if (value === null) {
+          value = localStorage.getItem(oldKey);
+          if (value !== null) { try { localStorage.setItem(key, value); localStorage.removeItem(oldKey); } catch (error) { /* Keep the old save if migration fails. */ } }
+        }
+        return value;
+      };
       document.querySelectorAll("[data-save]").forEach((button) => button.addEventListener("click", () => {
         const name = button.dataset.save;
         const form = document.querySelector(`[data-model-form="${name}"]`);
-        localStorage.setItem(`lets-sort-it-out-${name}`, JSON.stringify(formData(form)));
+        localStorage.setItem(`${SAVE_PREFIX}${name}`, JSON.stringify(formData(form)));
         document.querySelector(`[data-status="${name}"]`).textContent = "Saved on this device.";
       }));
       document.querySelectorAll("[data-model-form]").forEach((form) => {
         const name = form.dataset.modelForm;
-        const saved = localStorage.getItem(`lets-sort-it-out-${name}`);
+        const saved = readSaved(`${SAVE_PREFIX}${name}`, `${OLD_SAVE_PREFIX}${name}`);
         if (!saved) return;
         try { Object.entries(JSON.parse(saved)).forEach(([key, value]) => { if (form.elements[key]) form.elements[key].value = value; }); document.querySelector(`[data-status="${name}"]`).textContent = "Saved answers restored."; } catch (error) { /* Ignore an old or malformed local save. */ }
       });
@@ -508,10 +518,10 @@
         result.scrollIntoView({ behavior: "smooth", block: "nearest" });
       });
       document.getElementById("save-whys").addEventListener("click", () => {
-        localStorage.setItem("lets-sort-it-out-five-whys", JSON.stringify(formData(whyForm)));
+        localStorage.setItem(`${SAVE_PREFIX}five-whys`, JSON.stringify(formData(whyForm)));
         document.getElementById("why-save-status").textContent = "Saved on this device.";
       });
-      const savedWhys = localStorage.getItem("lets-sort-it-out-five-whys");
+      const savedWhys = readSaved(`${SAVE_PREFIX}five-whys`, `${OLD_SAVE_PREFIX}five-whys`);
       if (savedWhys) { try { Object.entries(JSON.parse(savedWhys)).forEach(([key, value]) => { if (whyForm.elements[key]) whyForm.elements[key].value = value; }); document.getElementById("why-save-status").textContent = "Saved answers restored."; } catch (error) { /* Ignore an old or malformed local save. */ } }
     </script>
 <script src="../assets/tool-shell.js?v=20260807-nav2"></script><script src="/assets/mobile-shell.js"></script><script src="/assets/auth.js" type="module"></script></body>
