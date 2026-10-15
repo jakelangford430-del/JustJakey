@@ -1,6 +1,6 @@
-# Let's Sort It Out — website
+# Just Jakey — website
 
-Public site and free tools for [Let's Sort It Out](https://github.com/jakelangford430-del/letsotitoutweb).
+Public site and free tools for [Just Jakey](https://github.com/jakelangford430-del/letsotitoutweb).
 
 Static HTML/CSS/JS, deployed via Netlify (`netlify.toml`, `_redirects`, `_headers`).
 

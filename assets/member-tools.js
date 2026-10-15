@@ -22,7 +22,7 @@ const storageProfiles = {
 
 const storageProfile = (key) => {
   if (storageProfiles[key]) return storageProfiles[key];
-  if (key.startsWith('lets-sort-it-out-')) return { toolSlug: 'business-thinking', title: 'Business Thinking Tools' };
+  if (key.startsWith('just-jakey-') || key.startsWith('lets-sort-it-out-')) return { toolSlug: 'business-thinking', title: 'Business Thinking Tools' };
   return null;
 };
 
