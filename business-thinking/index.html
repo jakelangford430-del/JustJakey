@@ -2,18 +2,15 @@
 
 <html lang="en-AU" class="auth-pending">
 <head>
-<meta charset="utf-8"/>
+<meta charset="utf-8"/><link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><meta name="theme-color" content="#2F4A39"><link rel="preload" href="/assets/fonts/antonio-var.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="/assets/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin><link rel="stylesheet" href="/assets/tokens-v2.css">
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="Use practical business thinking models including SWOT, PESTEL, Five Whys and Three Horizons for Australian small teams." name="description"/>
 <title>Free Business Planning Tools: SWOT, PESTEL &amp; Five Whys</title>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Antonio:wght@600;700&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
 <link href="../assets/core.css" rel="stylesheet"/>
 <style>
       .eyebrow,
       .step-label {
-        color: var(--rust);
+        color: #2F4A39;
         font-size: 0.75rem;
         font-weight: 700;
         letter-spacing: 0.12em;
@@ -49,7 +46,7 @@
       }
       .boundary-note strong {
         display: block;
-        color: var(--rust);
+        color: #2F4A39;
         margin-bottom: 5px;
       }
       .boundary-note p {
@@ -81,7 +78,7 @@
       }
       .model-choice span {
         display: block;
-        color: var(--rust);
+        color: #2F4A39;
         font: 700 1.55rem/1 Antonio, sans-serif;
         margin-bottom: 14px;
       }
@@ -202,7 +199,7 @@
       }
       .result-item strong {
         display: block;
-        color: var(--rust);
+        color: #2F4A39;
         font-size: 0.74rem;
         letter-spacing: 0.09em;
         text-transform: uppercase;
@@ -224,7 +221,7 @@
         align-items: center;
         justify-content: center;
         padding: 0 20px;
-        background: var(--rust);
+        background: #2F4A39;
         color: #fff;
         border-radius: 3px;
         font: 700 0.95rem Antonio, sans-serif;
@@ -251,7 +248,7 @@
       }
       .why-item > span {
         padding-top: 12px;
-        color: var(--rust);
+        color: #2F4A39;
         font: 700 1.35rem/1 Antonio, sans-serif;
         text-transform: uppercase;
       }
@@ -524,5 +521,5 @@
       const savedWhys = readSaved(`${SAVE_PREFIX}five-whys`, `${OLD_SAVE_PREFIX}five-whys`);
       if (savedWhys) { try { Object.entries(JSON.parse(savedWhys)).forEach(([key, value]) => { if (whyForm.elements[key]) whyForm.elements[key].value = value; }); document.getElementById("why-save-status").textContent = "Saved answers restored."; } catch (error) { /* Ignore an old or malformed local save. */ } }
     </script>
-<script src="../assets/tool-shell.js?v=20260807-nav2"></script><script src="/assets/mobile-shell.js"></script><script src="/assets/auth.js" type="module"></script></body>
+<script src="../assets/tool-shell.js?v=20261016-brand2"></script><script src="/assets/mobile-shell.js"></script><script src="/assets/auth.js" type="module"></script></body>
 </html>

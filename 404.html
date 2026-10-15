@@ -1,25 +1,21 @@
 <!doctype html>
 <html lang="en-AU" data-absolute-nav>
   <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8" /><link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><meta name="theme-color" content="#2F4A39"><link rel="preload" href="/assets/fonts/antonio-var.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="/assets/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin><link rel="stylesheet" href="/assets/tokens-v2.css">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="robots" content="noindex, follow" />
     <meta name="description" content="This page could not be found. Head back to the Just Jakey homepage and we will get you sorted." />
     <title>Oops. Sorry. | Just Jakey</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@600;700&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet" />
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="manifest" href="/site.webmanifest" />
     <link href="/assets/brand.css" rel="stylesheet" />
     <style>
       /* Brand tokens lifted from the homepage so this page cannot drift out of step. */
       :root {
         --forest: #111813;
-        --nav: #142019;
-        --olive: #2c3e2d;
-        --sage: #6b7f5e;
-        --white: #faf8f5;
+        --nav: #2F4A39;
+        --olive: #2F4A39;
+        --sage: #7E947C;
+        --white: #F5F0E6;
         --cream: #f5f0e6;
         --rust: #d4712a;
         --radius: 14px;
@@ -50,7 +46,7 @@
       .header-inner { height: 100%; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
       .wordmark { font-size: 1.8rem; line-height: 1; text-decoration: none; }
       .site-nav { display: flex; align-items: center; gap: 18px; }
-      .site-nav a { font-size: 0.78rem; font-weight: 700; text-transform: uppercase; text-decoration: none; color: rgba(250, 248, 245, 0.82); }
+      .site-nav a { font-size: 0.78rem; font-weight: 700; text-transform: uppercase; text-decoration: none; color: rgba(245,240,230, 0.82); }
       .site-nav a:hover { color: #fff; }
       .menu-button { display: none; align-items: center; gap: 10px; background: none; border: 0; color: #fff; font: 600 0.8rem Inter, Arial, sans-serif; text-transform: uppercase; padding: 12px; cursor: pointer; }
       .menu-button i, .menu-button i::before, .menu-button i::after { display: block; width: 22px; height: 2px; background: #fff; position: relative; }
@@ -73,24 +69,24 @@
       .oops { display: grid; grid-template-columns: minmax(0, 1.32fr) minmax(0, 0.68fr); gap: clamp(28px, 6vw, 88px); align-items: end; }
 
       .eyebrow { display: inline-flex; align-items: center; gap: 12px; margin: 0 0 22px;
-        font-size: 0.72rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--rust); }
-      .eyebrow::before { content: ""; width: 34px; height: 3px; background: var(--rust); }
+        font-size: 0.72rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: #2F4A39; }
+      .eyebrow::before { content: ""; width: 34px; height: 3px; background: #2F4A39; }
 
       h1 { margin: 0 0 26px; font-size: clamp(4rem, 13vw, 10.5rem); line-height: 0.84; letter-spacing: -0.03em; text-transform: uppercase; }
-      h1 em { font-style: normal; color: var(--rust); }
+      h1 em { font-style: normal; color: #2F4A39; }
 
       .lead { max-width: 30ch; margin: 0 0 18px; font-size: clamp(1.3rem, 2.6vw, 2rem); font-weight: 600; line-height: 1.18; }
-      .lead b { color: var(--rust); font-weight: 600; }
-      .support { max-width: 54ch; margin: 0; font-size: 1.02rem; color: rgba(250, 248, 245, 0.74); }
+      .lead b { color: #2F4A39; font-weight: 600; }
+      .support { max-width: 54ch; margin: 0; font-size: 1.02rem; color: rgba(245,240,230, 0.74); }
 
       .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 34px; }
       .button { display: inline-flex; min-height: 52px; padding: 0 30px; align-items: center; justify-content: center;
         border: 2px solid transparent; border-radius: 2px; font-size: 1.05rem; text-transform: uppercase;
         text-decoration: none; cursor: pointer; background: none; color: var(--white);
         transition: background-color 0.18s ease, transform 0.18s ease, border-color 0.18s ease; }
-      .button-primary { background: var(--rust); }
+      .button-primary { background: #2F4A39; }
       .button-primary:hover { background: #b85c20; transform: translateY(-2px); }
-      .button-outline { border-color: rgba(250, 248, 245, 0.55); }
+      .button-outline { border-color: rgba(245,240,230, 0.55); }
       .button-outline:hover { background: rgba(255, 255, 255, 0.1); border-color: var(--white); transform: translateY(-2px); }
       .button:active { transform: translateY(0); }
       .button:focus-visible, a:focus-visible, .skip-link:focus-visible { outline: 3px solid #f3b27e; outline-offset: 4px; }
@@ -103,19 +99,19 @@
         .code { color: transparent; -webkit-text-stroke: 2px rgba(107, 127, 94, 0.85); }
       }
       .code-label { display: block; margin-top: 16px; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.18em;
-        text-transform: uppercase; color: rgba(250, 248, 245, 0.5); }
+        text-transform: uppercase; color: rgba(245,240,230, 0.5); }
 
-      .help { position: relative; z-index: 2; border-top: 1px solid rgba(255, 255, 255, 0.12); background: rgba(20, 32, 25, 0.6); }
-      .help-inner { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 26px; padding: 20px 0; font-size: 0.84rem; color: rgba(250, 248, 245, 0.7); }
+      .help { position: relative; z-index: 2; border-top: 1px solid rgba(255, 255, 255, 0.12); background: rgba(47,74,57, 0.6); }
+      .help-inner { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 26px; padding: 20px 0; font-size: 0.84rem; color: rgba(245,240,230, 0.7); }
       .help-inner strong { color: var(--white); font-weight: 600; }
-      .help-inner a { color: var(--rust); font-weight: 600; text-decoration: none; }
+      .help-inner a { color: #2F4A39; font-weight: 600; text-decoration: none; }
       .help-inner a:hover { text-decoration: underline; }
 
       footer { position: relative; z-index: 2; background: var(--nav); border-top: 1px solid rgba(255, 255, 255, 0.12); padding: 24px 0; }
       .footer-inner { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 14px;
-        font-size: 0.76rem; color: rgba(250, 248, 245, 0.72); }
+        font-size: 0.76rem; color: rgba(245,240,230, 0.72); }
       footer .wordmark { font-size: 1.35rem; color: #fff; }
-      footer a { color: rgba(250, 248, 245, 0.72); }
+      footer a { color: rgba(245,240,230, 0.72); }
 
       /* One staggered entrance, rather than scattered micro-animations. */
       .reveal { opacity: 0; transform: translateY(18px); animation: rise 0.62s cubic-bezier(0.22, 0.8, 0.3, 1) forwards; }
@@ -256,7 +252,7 @@
         });
       })();
     </script>
-    <script src="/assets/tool-shell.js?v=20260807-nav2"></script>
+    <script src="/assets/tool-shell.js?v=20261016-brand2"></script>
     <script type="module" src="/assets/auth.js?v=20260801-auth2"></script>
   </body>
 </html>

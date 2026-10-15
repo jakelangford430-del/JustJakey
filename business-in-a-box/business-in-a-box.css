@@ -1,17 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap');
 
 .bib-page {
-  --bib-night: #0d1912;
-  --bib-night-2: #132319;
-  --bib-olive: #2c3e2d;
+  --bib-night: #111813;
+  --bib-night-2: #1B2A20;
+  --bib-olive: #2F4A39;
   --bib-olive-2: #3b523d;
-  --bib-sage: #6b7f5e;
+  --bib-sage: #7E947C;
   --bib-orange: #d4712a;
-  --bib-orange-dark: #b85d1d;
+  --bib-orange-dark: #2F4A39;
   --bib-charcoal: #2d3230;
   --bib-muted: #606963;
   --bib-cream: #f5f0e6;
-  --bib-warm-white: #faf8f5;
+  --bib-warm-white: #F5F0E6;
   --bib-white: #ffffff;
   --bib-border: rgba(44, 62, 45, 0.16);
   --bib-shadow: 0 18px 50px rgba(8, 19, 12, 0.14);
@@ -91,8 +90,8 @@
 .bib-btn:focus-visible,
 .bib-service-toggle:focus-visible,
 .bib-faq summary:focus-visible { outline: 3px solid rgba(212, 113, 42, 0.38); outline-offset: 4px; }
-.bib-btn--primary { background: var(--bib-orange); color: var(--bib-white); box-shadow: 0 12px 28px rgba(212, 113, 42, 0.24); }
-.bib-btn--primary:hover { background: var(--bib-orange-dark); color: var(--bib-white); }
+.bib-btn--primary { background: #2F4A39; color: var(--bib-white); box-shadow: 0 12px 28px rgba(17, 24, 19, 0.2); }
+.bib-btn--primary:hover { background: #253D2F; color: var(--bib-white); }
 .bib-btn--secondary { border-color: var(--bib-olive); background: transparent; color: var(--bib-olive); }
 .bib-btn--secondary:hover { background: var(--bib-olive); color: var(--bib-white); }
 .bib-btn--light { border-color: rgba(255, 255, 255, 0.55); color: var(--bib-white); }
@@ -107,7 +106,7 @@
   color: rgba(255, 255, 255, 0.86);
 }
 .bib-hero::before { position: absolute; top: 0; right: 0; left: 0; height: 1px; background: rgba(255, 255, 255, 0.12); content: ""; }
-.bib-hero::after { position: absolute; right: -190px; bottom: -270px; width: 560px; height: 560px; border: 66px solid rgba(212, 113, 42, 0.08); border-radius: 50%; content: ""; pointer-events: none; }
+/* decorative ring removed (brand v2: no shapes behind text) */
 .bib-hero-grid { position: relative; z-index: 1; display: grid; grid-template-columns: minmax(0, 1.26fr) minmax(300px, 0.74fr); gap: clamp(44px, 7vw, 94px); align-items: center; }
 .bib-hero .bib-kicker { color: #ff9a52; }
 .bib-hero .bib-title { max-width: 940px; margin-bottom: 26px; color: var(--bib-white); font-size: clamp(4rem, 8vw, 7.8rem); line-height: 0.88; letter-spacing: -0.035em; }
@@ -119,9 +118,9 @@
 .bib-hero .bib-btn--secondary:hover { border-color: var(--bib-white); background: var(--bib-white); color: var(--bib-night); }
 .bib-trust-line { display: flex; flex-wrap: wrap; gap: 10px 20px; margin-top: 23px; color: rgba(255, 255, 255, 0.63); font-size: 0.86rem; font-weight: 600; }
 .bib-trust-line span { display: inline-flex; align-items: center; gap: 8px; }
-.bib-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--bib-orange); }
+.bib-dot { width: 7px; height: 7px; border-radius: 50%; background: #2F4A39; }
 .bib-audit-card { position: relative; padding: 31px; border: 1px solid rgba(255, 255, 255, 0.14); border-radius: var(--bib-radius-lg); background: rgba(255, 255, 255, 0.045); box-shadow: 0 24px 60px rgba(0, 0, 0, 0.22); }
-.bib-audit-card::before { position: absolute; top: 0; left: 31px; width: 94px; height: 5px; border-radius: 0 0 5px 5px; background: var(--bib-orange); content: ""; }
+.bib-audit-card::before { position: absolute; top: 0; left: 31px; width: 94px; height: 5px; border-radius: 0 0 5px 5px; background: #2F4A39; content: ""; }
 .bib-audit-card h2 { margin-bottom: 8px; color: var(--bib-white); font-size: 2.15rem; }
 .bib-audit-card > p { color: rgba(255, 255, 255, 0.63); font-size: 0.92rem; }
 .bib-audit-list { display: grid; gap: 10px; margin: 24px 0 0; padding: 0; list-style: none; }
@@ -156,7 +155,7 @@
 .bib-service > p { margin-bottom: 18px; color: var(--bib-muted); font-size: 0.91rem; }
 .bib-service-details { display: grid; gap: 8px; margin: auto 0 0; padding: 17px 0 0; border-top: 1px solid var(--bib-border); list-style: none; }
 .bib-service-details li { position: relative; padding-left: 17px; color: var(--bib-charcoal); font-size: 0.83rem; }
-.bib-service-details li::before { position: absolute; top: 0.62em; left: 0; width: 6px; height: 6px; border-radius: 50%; background: var(--bib-orange); content: ""; }
+.bib-service-details li::before { position: absolute; top: 0.62em; left: 0; width: 6px; height: 6px; border-radius: 50%; background: #2F4A39; content: ""; }
 
 .bib-session-grid { display: grid; grid-template-columns: minmax(0, 0.83fr) minmax(0, 1.17fr); gap: clamp(40px, 8vw, 100px); align-items: center; }
 .bib-includes { display: grid; gap: 10px; margin: 26px 0 0; padding: 0; list-style: none; }
@@ -164,7 +163,7 @@
 .bib-includes .bib-check { flex: 0 0 27px; background: rgba(255, 255, 255, 0.12); color: #ffb47d; }
 .bib-steps { display: grid; gap: 14px; }
 .bib-step { display: grid; grid-template-columns: 58px 1fr; gap: 18px; align-items: start; padding: 22px; border: 1px solid rgba(255, 255, 255, 0.14); border-radius: var(--bib-radius); background: rgba(255, 255, 255, 0.07); }
-.bib-step-number { display: grid; width: 58px; height: 58px; place-items: center; border-radius: 18px; background: var(--bib-orange); color: var(--bib-white); font-family: "Antonio", Impact, sans-serif; font-size: 1.8rem; font-weight: 700; }
+.bib-step-number { display: grid; width: 58px; height: 58px; place-items: center; border-radius: 18px; background: #2F4A39; color: var(--bib-white); font-family: "Antonio", Impact, sans-serif; font-size: 1.8rem; font-weight: 700; }
 .bib-step h3 { margin: 2px 0 7px; font-size: 1.62rem; }
 .bib-step p { margin-bottom: 0; color: rgba(255, 255, 255, 0.72); font-size: 0.9rem; }
 
@@ -196,7 +195,7 @@
 .bib-faq-answer p:last-child { margin-bottom: 0; }
 
 .bib-final { position: relative; padding: 94px 0; overflow: hidden; background: var(--bib-night); color: rgba(255, 255, 255, 0.8); }
-.bib-final::after { position: absolute; right: -150px; bottom: -235px; width: 470px; height: 470px; border: 54px solid rgba(212, 113, 42, 0.08); border-radius: 50%; content: ""; }
+/* decorative ring removed (brand v2) */
 .bib-final-card { position: relative; z-index: 1; display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 42px; align-items: center; }
 .bib-final-card::after { display: none; }
 .bib-final-card h2 { max-width: 800px; margin-bottom: 15px; color: var(--bib-white); font-size: clamp(3rem, 6vw, 5.7rem); }
@@ -239,7 +238,7 @@
   .bib-final { padding: 70px 0 100px; }
   .bib-final-card { gap: 28px; }
   .bib-section-switch { align-items: flex-start; flex-direction: column; margin-bottom: 32px; }
-  .bib-mobile-cta { position: fixed; z-index: 60; right: 12px; bottom: 12px; left: 12px; display: block; padding: 12px; border: 1px solid rgba(255, 255, 255, 0.13); border-radius: 16px; background: #0d1912; box-shadow: 0 14px 36px rgba(0, 0, 0, 0.28); }
+  .bib-mobile-cta { position: fixed; z-index: 60; right: 12px; bottom: 12px; left: 12px; display: block; padding: 12px; border: 1px solid rgba(255, 255, 255, 0.13); border-radius: 16px; background: #2F4A39; box-shadow: 0 14px 36px rgba(0, 0, 0, 0.28); }
   .bib-mobile-cta .bib-btn { width: 100%; }
 }
 
@@ -247,4 +246,12 @@
   .bib-page *,
   .bib-page *::before,
   .bib-page *::after { scroll-behavior: auto !important; transition-duration: 0.01ms !important; }
+}
+
+/* Review fix 5: the sticky $99 bar must never cover the price.
+   Reserve space at the bottom and only reveal the bar once the hero price has scrolled past. */
+@media (max-width: 760px) {
+  .bib-page { padding-bottom: 96px; }
+  .bib-mobile-cta { transform: translateY(140%); transition: transform .25s ease; }
+  .bib-mobile-cta.is-visible { transform: none; }
 }

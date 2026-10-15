@@ -1,0 +1,61 @@
+/*
+ * Just Jakey — design tokens v2
+ * Drop in: /assets/tokens-v2.css  (load BEFORE brand.css / page CSS)
+ * Rules: rust = tiny accents only (dots, short bars, underlines), NEVER text or button labels.
+ *        sage = thin decorative dividers only. Never put lines/waves behind text.
+ */
+:root{
+  /* Palette — roles & target share of a page */
+  --jj2-cream:#F5F0E6;   /* page background ~55% */
+  --jj2-green:#2F4A39;   /* headings, buttons, nav, footer ~30% */
+  --jj2-forest:#111813;  /* body text, dark sections ~10% */
+  --jj2-rust:#D4712A;    /* accents only ~5% */
+  --jj2-card:#ECE5D6;    /* panels behind cards/callouts */
+  --jj2-sage:#7E947C;    /* thin dividers only */
+
+  /* Derived */
+  --jj2-white:#FFFFFF;                 /* inputs, raised form cards */
+  --jj2-muted:#4D514E;                 /* secondary text on cream/card (7.1:1) */
+  --jj2-on-green:#F5F0E6;              /* text on green (8.56:1) */
+  --jj2-on-green-muted:rgba(245,240,230,.82); /* secondary text on green (≥6.4:1) */
+  --jj2-green-hover:#253D2F;           /* button hover */
+  --jj2-line:rgba(17,24,19,.12);       /* hairline borders on cream */
+  --jj2-line-on-green:rgba(245,240,230,.4);
+  --jj2-focus:#2F4A39;                 /* focus ring on light; use cream on green */
+  --jj2-shadow:0 24px 50px -30px rgba(17,24,19,.35);
+
+  /* Type */
+  --jj2-font-display:"Antonio","Arial Narrow",Arial,sans-serif; /* 700, uppercase */
+  --jj2-font-body:"Inter",Arial,sans-serif;                     /* 400/500/600/700 */
+  --jj2-h1:clamp(2.75rem,1.6rem + 4.2vw,4.75rem); /* 44 → 76px */
+  --jj2-h2:clamp(2rem,1.4rem + 2.2vw,3rem);       /* 32 → 48px */
+  --jj2-h3:clamp(1.375rem,1.2rem + .6vw,1.625rem);/* 22 → 26px */
+  --jj2-lead:1.1875rem;  /* 19px */
+  --jj2-body:1rem;       /* 16px */
+  --jj2-small:.875rem;   /* 14px */
+  --jj2-eyebrow:.8125rem;/* 13px, 700, .16em tracking, uppercase */
+  --jj2-lh-display:1;
+  --jj2-lh-body:1.6;
+
+  /* Spacing (8px base) */
+  --jj2-s1:4px;--jj2-s2:8px;--jj2-s3:12px;--jj2-s4:16px;--jj2-s5:24px;
+  --jj2-s6:32px;--jj2-s7:48px;--jj2-s8:64px;--jj2-s9:96px;
+
+  /* Radius */
+  --jj2-r-sm:8px;   /* chips, small buttons */
+  --jj2-r-md:12px;  /* buttons, inputs, icon tiles */
+  --jj2-r-lg:18px;  /* cards, panels */
+  --jj2-r-pill:999px;
+
+  /* Sizes */
+  --jj2-btn-h:48px;--jj2-btn-h-sm:40px;--jj2-tap-min:44px;
+  --jj2-container:1200px;--jj2-icon:20px;--jj2-icon-stroke:2;
+}
+
+/* Self-hosted fonts (review fix 13) */
+@font-face{font-family:"Antonio";font-style:normal;font-weight:100 700;font-display:swap;src:url(/assets/fonts/antonio-var.woff2) format("woff2")}
+@font-face{font-family:"Inter";font-style:normal;font-weight:100 900;font-display:swap;src:url(/assets/fonts/inter-var.woff2) format("woff2")}
+
+/* Skip link (review fix 12) */
+.jj-skip{position:absolute;left:12px;top:-60px;z-index:10000;background:var(--jj2-green);color:var(--jj2-on-green);font:600 15px/1 var(--jj2-font-body);padding:14px 18px;border-radius:var(--jj2-r-md);text-decoration:none;transition:top .15s}
+.jj-skip:focus{top:12px;outline:3px solid var(--jj2-cream);outline-offset:2px}

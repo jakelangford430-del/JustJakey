@@ -1,12 +1,12 @@
 :root {
-  --olive: #D4712A;          /* Rust Orange (Primary Accent) */
-  --sage: #6B7F5E;           /* Soft Sage (Secondary Green) */
-  --charcoal: #FAF8F5;       /* Warm White (Main Text) */
+  --olive: #2F4A39;          /* Rust Orange (Primary Accent) */
+  --sage: #7E947C;           /* Soft Sage (Secondary Green) */
+  --charcoal: #F5F0E6;       /* Warm White (Main Text) */
   --warm-white: #111813;     /* Dark Forest (Main Background) */
-  --warm-cream: #1B231D;     /* Dark Card (Secondary Accent) */
-  --sage-light: #D4712A;     /* Primary button rust / tab active background */
+  --warm-cream: #111813;     /* Dark Card (Secondary Accent) */
+  --sage-light: #7E947C;     /* Primary button rust / tab active background */
   --line: rgba(255, 255, 255, 0.05); /* Contained border on dark background */
-  --muted: rgba(250, 248, 245, 0.6);  /* Muted text */
+  --muted: rgba(245,240,230, 0.6);  /* Muted text */
   --shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
   --text-scale: 1;
   --spacing-scale: 1;
@@ -203,7 +203,7 @@ h2, h3, .font-antonio { letter-spacing: 0.025em; text-transform: uppercase; }
 .preview-result { position: relative; z-index: 1; display: flex; align-items: center; justify-content: space-between; gap: 18px; margin-top: 26px; padding: 15px 17px; border-radius: 13px; background: var(--charcoal) !important; color: var(--warm-white) !important; }
 .preview-result small { color: var(--muted); font-size: 0.66rem; letter-spacing: 0.1em; text-transform: uppercase; }
 .preview-result strong { font-size: 0.8rem; color: #ffffff; }
-.reveal-panel { border: 1px solid var(--line); border-radius: 14px; background: rgba(250, 248, 245, 0.75); }
+.reveal-panel { border: 1px solid var(--line); border-radius: 14px; background: rgba(245,240,230, 0.75); }
 .reveal-panel summary {
   position: relative;
   padding: 16px 48px 16px 18px;
@@ -240,7 +240,7 @@ h2, h3, .font-antonio { letter-spacing: 0.025em; text-transform: uppercase; }
   z-index: 40;
   margin: 24px 0 42px;
   padding: 10px 14px;
-  border: 1px solid rgba(250, 248, 245, 0.12);
+  border: 1px solid rgba(245,240,230, 0.12);
   border-radius: 18px;
   background: #080f0a;
   box-shadow: 0 12px 40px rgba(8, 15, 10, 0.3);
@@ -253,7 +253,7 @@ h2, h3, .font-antonio { letter-spacing: 0.025em; text-transform: uppercase; }
 #step-summary { color: var(--muted); font-size: 0.68rem; font-weight: 700; white-space: nowrap; }
 .progress-list { display: flex; align-items: center; gap: 7px; margin: 0; padding: 0; list-style: none; }
 .progress-item { display: flex; min-width: 0; color: var(--muted); font-size: 0.7rem; font-weight: 600; }
-.progress-item span { display: grid; place-items: center; width: 18px; height: 18px; border: 1px solid rgba(250, 248, 245, 0.25); border-radius: 50%; font-size: 0; }
+.progress-item span { display: grid; place-items: center; width: 18px; height: 18px; border: 1px solid rgba(245,240,230, 0.25); border-radius: 50%; font-size: 0; }
 .progress-item b { display: none; }
 .progress-item.active { color: #ffffff; }
 .progress-item.active span { border: 5px solid #ffffff; background: var(--warm-white); }
@@ -347,7 +347,7 @@ code { font-family: "Inter", Arial, sans-serif; line-height: 1.7; }
   border-radius: 30px !important;
   background: var(--charcoal) !important;
   color: var(--warm-white) !important;
-  border: 1px solid rgba(250, 248, 245, 0.12);
+  border: 1px solid rgba(245,240,230, 0.12);
   box-shadow: var(--shadow);
 }
 #cta-section::after { content: ""; position: absolute; width: 140px; height: 140px; right: -62px; bottom: -64px; border-radius: 50%; background: rgba(107, 127, 94, 0.08); }
@@ -357,7 +357,7 @@ code { font-family: "Inter", Arial, sans-serif; line-height: 1.7; }
 #cta-section a:hover { background: var(--warm-cream) !important; }
 .feedback-kicker { display: block; margin-bottom: 10px; color: var(--sage) !important; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; }
 .feedback-secondary { border: 1px solid var(--warm-white) !important; border-radius: 999px !important; background: transparent !important; color: var(--warm-white) !important; }
-.feedback-secondary:hover { background: rgba(250, 248, 245, 0.08) !important; }
+.feedback-secondary:hover { background: rgba(245,240,230, 0.08) !important; }
 .feedback-note { display: block; margin-top: 20px; color: var(--sage) !important; font-size: 0.7rem; }
 .implementation-plan { display: grid; gap: 10px; margin: 24px 0 0; padding: 0; list-style: none; counter-reset: plan; }
 .implementation-plan li { position: relative; padding: 16px 18px 16px 58px; border-radius: 14px; background: var(--warm-cream); }
@@ -683,7 +683,7 @@ code { font-family: "Inter", Arial, sans-serif; line-height: 1.7; }
 
 #settings-dropdown {
   background: var(--charcoal) !important;
-  border: 1px solid rgba(250, 248, 245, 0.16) !important;
+  border: 1px solid rgba(245,240,230, 0.16) !important;
   color: var(--warm-white) !important;
   box-shadow: 0 15px 40px rgba(45, 50, 48, 0.25) !important;
 }

@@ -4,17 +4,18 @@
  * This file intentionally leaves tool-generated colour swatches untouched.
  */
 :root {
-  --jj-dark-forest: #111813;
-  --jj-dark-nav: #142019;
-  --jj-dark-card: #1B231D;
-  --jj-olive: #2C3E2D;
-  --jj-sage: #6B7F5E;
-  --jj-rust: #D4712A;
-  --jj-rust-nav: #D4712A;
-  --jj-cream: #F5F0E6;
-  --jj-nav-cream: #F7F1E5;
-  --jj-warm-white: #FAF8F5;
-  --jj-charcoal: #2D3230;
+  /* Bridge: legacy --jj-* names now point at the v2 tokens (assets/tokens-v2.css) */
+  --jj-dark-forest: var(--jj2-forest, #111813);
+  --jj-dark-nav: var(--jj2-green, #2F4A39);
+  --jj-dark-card: var(--jj2-forest, #111813);
+  --jj-olive: var(--jj2-green, #2F4A39);
+  --jj-sage: var(--jj2-sage, #7E947C);
+  --jj-rust: var(--jj2-rust, #D4712A); /* accents only: dots, short bars, underlines */
+  --jj-rust-nav: var(--jj2-cream, #F5F0E6);
+  --jj-cream: var(--jj2-cream, #F5F0E6);
+  --jj-nav-cream: var(--jj2-cream, #F5F0E6);
+  --jj-warm-white: var(--jj2-cream, #F5F0E6);
+  --jj-charcoal: var(--jj2-forest, #111813);
 }
 
 html {
@@ -38,7 +39,7 @@ body.jj-site .font-antonio {
 }
 
 body.jj-site > nav:first-of-type {
-  background: rgba(20, 32, 25, 0.95) !important;
+  background: rgba(47,74,57, 0.95) !important;
   color: var(--jj-nav-cream) !important;
   border-bottom-color: rgba(255, 255, 255, 0.1) !important;
 }
@@ -76,7 +77,7 @@ body.jj-site textarea {
 
 body.jj-site ::selection {
   color: var(--jj-warm-white);
-  background: var(--jj-rust);
+  background: var(--jj2-green);
 }
 
 ::-webkit-scrollbar {
@@ -134,11 +135,11 @@ body.jj-site > nav:first-of-type a[href*="#contact"]:hover {
 .jj-tool-nav__inner { width: min(1180px, calc(100% - 36px)); min-height: 74px; margin: auto; display: flex; align-items: center; justify-content: space-between; gap: 18px; }
 .jj-tool-nav__brand { color: var(--jj-warm-white); text-decoration: none; font-family: "Antonio", "Arial Narrow", sans-serif; font-size: 1.65rem; font-weight: 700; }
 .jj-tool-nav__links { display: flex; align-items: center; gap: 14px; }
-.jj-tool-nav__links a { color: rgba(250,248,245,.78); text-decoration: none; font-size: .74rem; font-weight: 700; text-transform: uppercase; }
+.jj-tool-nav__links a { color: rgba(245,240,230,.78); text-decoration: none; font-size: .74rem; font-weight: 700; text-transform: uppercase; }
 .jj-tool-nav__links a:hover { color: #fff; }
-.jj-tool-nav__cta { min-height: 44px; display: inline-flex; align-items: center; padding: 0 22px; background: var(--jj-rust); color: #fff !important; font-family: "Antonio", "Arial Narrow", sans-serif; font-size: 1rem !important; text-transform: uppercase; }
+.jj-tool-nav__cta { min-height: 44px; display: inline-flex; align-items: center; padding: 0 22px; background: var(--jj2-green); color: #fff !important; font-family: "Antonio", "Arial Narrow", sans-serif; font-size: 1rem !important; text-transform: uppercase; }
 .jj-tool-nav__menu { display: none; min-height: 44px; padding: 0 14px; border: 1px solid rgba(255,255,255,.55); border-radius: 5px; background: transparent; color: #fff; font-weight: 700; text-transform: uppercase; }
-.jj-tool-nav__links .jj-tool-nav__save-exit { display: inline-flex; align-items: center; justify-content: center; min-height: 38px; padding: 0 14px; border: 1px solid rgba(255,255,255,.4); border-radius: 4px; background: transparent; color: rgba(250,248,245,.85); font: 700 .72rem/1 Inter, Arial, sans-serif; text-transform: uppercase; letter-spacing: .02em; cursor: pointer; }
+.jj-tool-nav__links .jj-tool-nav__save-exit { display: inline-flex; align-items: center; justify-content: center; min-height: 38px; padding: 0 14px; border: 1px solid rgba(255,255,255,.4); border-radius: 4px; background: transparent; color: rgba(245,240,230,.85); font: 700 .72rem/1 Inter, Arial, sans-serif; text-transform: uppercase; letter-spacing: .02em; cursor: pointer; }
 .jj-tool-nav__links .jj-tool-nav__save-exit:hover { color: #fff; border-color: #fff; }
 body.jj-site button, body.jj-site a { min-height: 44px; }
 @media (max-width: 850px) {
@@ -153,7 +154,7 @@ body.jj-site button, body.jj-site a { min-height: 44px; }
 /* Shared footer — the single footer design used on every page. */
 .jj-tool-footer {
   background: var(--jj-dark-forest);
-  color: rgba(250, 248, 245, .72);
+  color: rgba(245,240,230, .72);
   border-top: 1px solid rgba(255, 255, 255, .12);
   padding: 48px 0 24px;
   font-family: "Inter", Arial, sans-serif;
@@ -161,15 +162,80 @@ body.jj-site button, body.jj-site a { min-height: 44px; }
 .jj-tool-footer__inner { width: min(1180px, calc(100% - 36px)); margin: 0 auto; }
 .jj-tool-footer__links { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; padding-bottom: 28px; margin-bottom: 22px; border-bottom: 1px solid rgba(255, 255, 255, .14); }
 .jj-tool-footer__group { display: grid; align-content: start; gap: 9px; }
-.jj-tool-footer__group h3 { margin: 0 0 4px; color: var(--jj-rust); font-size: .68rem; line-height: 1.2; letter-spacing: .12em; text-transform: uppercase; font-weight: 700; }
-.jj-tool-footer__group a { color: rgba(250, 248, 245, .72); font-size: .78rem; text-decoration: none; }
+.jj-tool-footer__group h3 { margin: 0 0 4px; color: #2F4A39; font-size: .68rem; line-height: 1.2; letter-spacing: .12em; text-transform: uppercase; font-weight: 700; }
+.jj-tool-footer__group a { color: rgba(245,240,230, .72); font-size: .78rem; text-decoration: none; }
 .jj-tool-footer__group a:hover { color: #fff; }
 .jj-tool-footer__bottom { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; font-size: .75rem; }
 .jj-tool-footer__brand { text-decoration: none; color: #fff; font-family: "Antonio", "Arial Narrow", sans-serif; font-size: 1.35rem; font-weight: 700; }
-.jj-tool-footer__bottom span a { color: rgba(250, 248, 245, .72); text-decoration: none; }
+.jj-tool-footer__bottom span a { color: rgba(245,240,230, .72); text-decoration: none; }
 .jj-tool-footer__bottom span a:hover { color: #fff; }
 @media (max-width: 700px) {
   .jj-tool-footer__links { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px 18px; }
   .jj-tool-footer__group:last-child { grid-column: 1 / -1; }
   .jj-tool-footer__bottom { flex-direction: column; align-items: flex-start; }
 }
+
+/* ==========================================================================
+   Brand v2 layer (Just Jakey, Oct 2026). Tokens live in /assets/tokens-v2.css.
+   Rust = tiny accents only. Never text, labels or button fills.
+   ========================================================================== */
+body.jj-site { background: var(--jj2-cream); color: var(--jj2-forest); font-family: var(--jj2-font-body); }
+body.jj-site h1, body.jj-site h2, body.jj-site h3, body.jj-site h4, body.jj-site .font-antonio { font-family: var(--jj2-font-display); }
+body.jj-site h1 { font-size: min(var(--jj2-h1), 76px); line-height: var(--jj2-lh-display); }
+@media (max-width: 700px) { body.jj-site h1 { font-size: min(var(--jj2-h1), 50px); } }
+body.jj-site :focus-visible { outline: 3px solid var(--jj2-focus); outline-offset: 3px; }
+body.jj-site .jj-tool-nav :focus-visible, body.jj-site .jj-tool-footer :focus-visible { outline-color: var(--jj2-cream); }
+body.jj-site input, body.jj-site select, body.jj-site textarea { accent-color: var(--jj2-green); }
+body.jj-site ::selection { color: var(--jj2-cream); background: var(--jj2-green); }
+
+/* Shared nav (review fixes 4 + header mark) */
+.jj-tool-nav { background: var(--jj2-green); color: var(--jj2-cream); border-bottom: 0; position: sticky; top: 0; min-height: 72px; }
+.jj-tool-nav__inner { width: min(var(--jj2-container), calc(100% - 40px)); min-height: 72px; gap: 20px; }
+.jj-tool-nav__brand { display: inline-flex; align-items: center; gap: 10px; color: var(--jj2-cream); font: 700 1.5rem/1 var(--jj2-font-display); letter-spacing: .06em; white-space: nowrap; }
+.jj-tool-nav__brand img { width: 36px; height: 36px; border-radius: 8px; box-shadow: 0 0 0 1.5px rgba(245,240,230,.4); flex: none; }
+.jj-tool-nav__links { gap: 4px; }
+.jj-tool-nav__links a { display: inline-flex; align-items: center; min-height: 44px; padding: 0 10px; border-radius: 8px; color: var(--jj2-on-green-muted); font: 500 15px/1.2 var(--jj2-font-body); text-transform: none; letter-spacing: 0; }
+.jj-tool-nav__links a:hover { color: var(--jj2-cream); background: rgba(245,240,230,.08); }
+.jj-tool-nav__links a[aria-current="page"] { color: var(--jj2-cream); background: rgba(245,240,230,.1); box-shadow: inset 0 -3px 0 var(--jj2-rust); border-radius: 8px 8px 0 0; }
+.jj-tool-nav__links .jj-tool-nav__cta { order: 3; min-height: var(--jj2-btn-h-sm); padding: 0 16px; margin-left: 4px; border-radius: var(--jj2-r-md); background: var(--jj2-cream); color: var(--jj2-green) !important; font: 600 14.5px/1 var(--jj2-font-body) !important; text-transform: none; white-space: nowrap; }
+.jj-tool-nav__links .jj-tool-nav__cta:hover { background: #fff; }
+.jj-tool-nav__menu { min-height: 44px; min-width: 44px; border-radius: var(--jj2-r-md); border: 1.5px solid rgba(245,240,230,.5); color: var(--jj2-cream); font: 600 15px/1 var(--jj2-font-body); text-transform: none; }
+.jj-tool-nav__links .auth-controls { order: 2; display: flex; gap: 6px; margin-left: 8px; }
+.jj-tool-nav .jj-tool-nav__links .auth-controls a, .jj-tool-nav .jj-tool-nav__links .auth-controls button { min-height: var(--jj2-btn-h-sm); padding: 0 14px; border-radius: var(--jj2-r-md); border: 0; box-shadow: inset 0 0 0 1.5px rgba(245,240,230,.6); background: transparent; color: var(--jj2-cream); font: 600 14.5px/1 var(--jj2-font-body); text-transform: none; letter-spacing: 0; }
+.jj-tool-nav__links .auth-controls .auth-register { display: none; }
+.jj-tool-nav__links .jj-tool-nav__save-exit { min-height: var(--jj2-btn-h-sm); border-radius: var(--jj2-r-md); color: var(--jj2-cream); font: 600 14.5px/1 var(--jj2-font-body); text-transform: none; }
+@media (max-width: 1180px) and (min-width: 1061px) { .jj-tool-nav__links a { padding: 0 7px; font-size: 14.5px; } }
+@media (max-width: 1060px) {
+  .jj-tool-nav__menu { display: block; }
+  .jj-tool-nav__links { display: none; position: absolute; top: 72px; left: 0; right: 0; padding: 12px 20px 20px; background: var(--jj2-green); flex-direction: column; align-items: stretch; box-shadow: 0 18px 30px -20px rgba(17,24,19,.6); }
+  .jj-tool-nav__links.open { display: flex; }
+  .jj-tool-nav__links a { min-height: 48px; padding: 0 4px; font-size: 16px; border-radius: 0; border-bottom: 1px solid rgba(245,240,230,.14); }
+  .jj-tool-nav__links a[aria-current="page"] { box-shadow: inset 3px 0 0 var(--jj2-rust); padding-left: 12px; border-radius: 0; }
+  .jj-tool-nav__links .jj-tool-nav__cta { justify-content: center; min-height: 48px; margin: 12px 0 0; border-bottom: 0; }
+  .jj-tool-nav__links .auth-controls { margin: 12px 0 0; }
+  .jj-tool-nav .jj-tool-nav__links .auth-controls a, .jj-tool-nav .jj-tool-nav__links .auth-controls button { flex: 1; min-height: 48px; justify-content: center; border-bottom: 0; }
+  .jj-tool-nav__links .auth-controls .auth-register { display: inline-flex; }
+}
+@media (max-width: 420px) { .jj-tool-nav__brand { font-size: 1.3rem; } .jj-tool-nav__brand img { width: 32px; height: 32px; } }
+
+/* Shared footer: green */
+.jj-tool-footer { background: var(--jj2-green); color: var(--jj2-on-green-muted); border-top: 0; }
+.jj-tool-footer__links { border-bottom-color: var(--jj2-line-on-green); }
+.jj-tool-footer__group h3 { color: var(--jj2-cream); font-family: var(--jj2-font-body); font-size: .8125rem; letter-spacing: .14em; }
+.jj-tool-footer__group a, .jj-tool-footer__bottom span a { display: inline-flex; align-items: center; min-height: 32px; color: var(--jj2-on-green-muted); font-size: .9375rem; }
+.jj-tool-footer__group a:hover, .jj-tool-footer__bottom span a:hover { color: var(--jj2-cream); }
+.jj-tool-footer__brand { color: var(--jj2-cream); }
+
+/* Shared hero pattern (review fix 9) */
+.jj-eyebrow { display: inline-flex; align-items: center; gap: 10px; color: var(--jj2-green); font: 700 var(--jj2-eyebrow)/1.2 var(--jj2-font-body); letter-spacing: .16em; text-transform: uppercase; }
+.jj-eyebrow::before { content: ""; width: 22px; height: 4px; border-radius: 2px; background: var(--jj2-rust); flex: none; }
+.jj-btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: var(--jj2-btn-h); padding: 0 22px; border-radius: var(--jj2-r-md); font: 600 15.5px/1 var(--jj2-font-body); text-decoration: none; white-space: nowrap; border: 0; cursor: pointer; }
+.jj-btn svg { width: 20px; height: 20px; }
+.jj-btn--primary { background: var(--jj2-green); color: var(--jj2-cream); }
+.jj-btn--primary:hover { background: var(--jj2-green-hover); }
+.jj-btn--secondary { background: transparent; color: var(--jj2-green); box-shadow: inset 0 0 0 1.5px var(--jj2-green); }
+.jj-btn--secondary:hover { background: rgba(47,74,57,.06); }
+.jj-btn--on-green { background: var(--jj2-cream); color: var(--jj2-green); }
+.jj-btn--outline-on-green { background: transparent; color: var(--jj2-cream); box-shadow: inset 0 0 0 1.5px var(--jj2-cream); }
+.jj-icon-tile { display: inline-grid; place-items: center; width: 40px; height: 40px; border-radius: var(--jj2-r-md); background: var(--jj2-green); color: var(--jj2-cream); flex: none; }
+.jj-icon-tile svg { width: var(--jj2-icon); height: var(--jj2-icon); stroke-width: var(--jj2-icon-stroke); }

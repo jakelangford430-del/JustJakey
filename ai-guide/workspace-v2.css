@@ -1,6 +1,6 @@
 :root {
-  --olive: #2c3e2d;
-  --sage: #6b7f5e;
+  --olive: #2F4A39;
+  --sage: #7E947C;
   --charcoal: #2d3230;
   --warm-white: #ffffff;
   --warm-cream: #f5f0e6;
@@ -73,7 +73,7 @@ body.jj-site svg { width: 20px; height: 20px; }
   height: 58px;
   border: 1px solid var(--rust);
   border-radius: 50%;
-  color: var(--rust);
+  color: #2F4A39;
 }
 .ai-tool-choice__icon--sage { border-color: var(--sage); color: var(--sage); }
 .ai-tool-choice__icon svg { width: 27px !important; height: 27px !important; }
@@ -100,7 +100,7 @@ body.jj-site svg { width: 20px; height: 20px; }
   padding: 0 18px !important;
   border: 1px solid var(--rust) !important;
   border-radius: 4px !important;
-  background: var(--rust) !important;
+  background: #2F4A39 !important;
   color: #fff !important;
   font-family: "Antonio", Arial, sans-serif !important;
   font-size: 1rem !important;
@@ -221,7 +221,7 @@ body.jj-site svg { width: 20px; height: 20px; }
   text-transform: uppercase;
 }
 .workspace-mode-switch button + button { border-left: 1px solid var(--line); }
-.workspace-mode-switch button.active { border-bottom-color: var(--rust); color: var(--rust); }
+.workspace-mode-switch button.active { border-bottom-color: var(--rust); color: #2F4A39; }
 
 .progress-shell {
   position: sticky;
@@ -269,7 +269,7 @@ body.jj-site svg { width: 20px; height: 20px; }
 .card-option:hover { border-color: var(--rust) !important; background: #fffaf5 !important; transform: translateY(-1px); }
 .card-option.selected { border-color: var(--rust) !important; background: #fff5ec !important; box-shadow: inset 4px 0 0 var(--rust) !important; }
 .card-option::after { border-color: #8b938e; }
-.card-option.selected::after { border-color: var(--rust); background: var(--rust); box-shadow: inset 0 0 0 4px #fff; }
+.card-option.selected::after { border-color: var(--rust); background: #2F4A39; box-shadow: inset 0 0 0 4px #fff; }
 .card-option small { color: var(--muted); }
 .platform-guidance,
 #results-tip,
@@ -278,7 +278,7 @@ body.jj-site svg { width: 20px; height: 20px; }
   border-radius: 0 !important;
   background: #fff5ec !important;
 }
-.platform-guidance strong { color: var(--rust); }
+.platform-guidance strong { color: #2F4A39; }
 .platform-guidance p { color: var(--muted); }
 .reveal-panel {
   border: 1px solid var(--line);
@@ -317,7 +317,7 @@ body.jj-site svg { width: 20px; height: 20px; }
 }
 .copy-btn,
 .answer-button { border-radius: 4px !important; }
-#tone-prompt-box > button { min-height: 48px; border: 0; border-radius: 4px !important; background: var(--rust) !important; }
+#tone-prompt-box > button { min-height: 48px; border: 0; border-radius: 4px !important; background: #2F4A39 !important; }
 
 #prompts-container > div {
   border: 1px solid var(--line) !important;
@@ -345,7 +345,7 @@ body.jj-site svg { width: 20px; height: 20px; }
 }
 #cta-section::after { display: none; }
 #cta-section h2 { color: #fff !important; }
-#cta-section p { color: rgba(250, 248, 245, 0.76) !important; }
+#cta-section p { color: rgba(245,240,230, 0.76) !important; }
 #cta-section a,
 .feedback-secondary { border-radius: 4px !important; }
 
@@ -389,7 +389,7 @@ body.jj-site svg { width: 20px; height: 20px; }
 .voice-progress { margin: 32px 0 38px; }
 .voice-progress span { color: var(--charcoal); font-weight: 700; }
 .voice-progress > div { height: 5px; margin-top: 10px; overflow: hidden; background: #d9d6d0; }
-.voice-progress i { display: block; width: 33.333%; height: 100%; background: var(--rust); transition: width 0.22s ease; }
+.voice-progress i { display: block; width: 33.333%; height: 100%; background: #2F4A39; transition: width 0.22s ease; }
 .voice-step h2 { margin: 0; color: #111813; font-size: clamp(2rem, 4vw, 3rem); text-transform: uppercase; }
 .voice-step > p { margin: 10px 0 22px; color: var(--muted); }
 .voice-choice-list { display: grid; gap: 10px; }
@@ -491,7 +491,7 @@ body.jj-site svg { width: 20px; height: 20px; }
 .ai-level ul,
 .kb-card p,
 .kb-steps li { color: var(--muted) !important; }
-.kb-badge { border-radius: 3px; background: var(--rust) !important; }
+.kb-badge { border-radius: 3px; background: #2F4A39 !important; }
 .cheat-item { border-color: var(--line) !important; border-radius: 5px !important; background: #fafafa !important; }
 .cheat-cmd { border-color: var(--line) !important; background: #fff !important; }
 

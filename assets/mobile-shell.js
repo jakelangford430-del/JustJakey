@@ -22,7 +22,7 @@
 
     .lsio-support-strip h2 {
       margin: 0 0 7px;
-      color: #111813;
+      color: #2F4A39;
       font: 700 2.35rem/.96 Antonio, "Arial Narrow", sans-serif;
       text-transform: uppercase;
     }
@@ -47,9 +47,9 @@
       align-items: center;
       justify-content: center;
       padding: 0 18px;
-      border: 2px solid #d4712a;
+      border: 2px solid #2F4A39;
       border-radius: 3px;
-      color: #d4712a;
+      color: #2F4A39;
       font: 700 .9rem/1 Antonio, "Arial Narrow", sans-serif;
       text-decoration: none;
       text-transform: uppercase;
@@ -57,8 +57,8 @@
     }
 
     .lsio-support-strip__actions a:first-child {
-      background: #d4712a;
-      color: #faf8f5;
+      background: #2F4A39;
+      color: #F5F0E6;
     }
 
     @media (max-width: 760px) {

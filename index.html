@@ -1,578 +1,14 @@
 <!DOCTYPE html>
 <html lang="en-AU">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8"><link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><meta name="theme-color" content="#2F4A39"><link rel="preload" href="/assets/fonts/antonio-var.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="/assets/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin><link rel="stylesheet" href="/assets/tokens-v2.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Just Jakey | Home Page</title>
     <meta name="description" content="Automation, efficiency, website setup and tech implementation for Australian small businesses. Simple systems that actually work.">
 
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
-            line-height: 1.6;
-            color: #2d3230;
-            background: #faf8f5;
-        }
-        h1, h2, h3, .wordmark {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
-            font-weight: 800;
-        }
-        .container { max-width: 1180px; margin: 0 auto; padding: 0 40px; }
-
-        /* HEADER */
-        .site-header {
-            background: #111813;
-            color: white;
-            padding: 32px 0;
-            border-bottom: 1px solid rgba(255,255,255,0.12);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-        .header-inner {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .wordmark {
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: white;
-            text-decoration: none;
-            letter-spacing: 0.05em;
-        }
-        .site-nav {
-            display: flex;
-            gap: 40px;
-            align-items: center;
-        }
-        .site-nav a {
-            color: rgba(250,248,245,0.82);
-            text-decoration: none;
-            font-size: 0.9rem;
-            transition: color 0.2s;
-        }
-        .site-nav a:hover { color: white; }
-        .button {
-            background: #d4712a;
-            color: white;
-            padding: 14px 28px;
-            border-radius: 4px;
-            text-decoration: none;
-            font-weight: 800;
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            transition: background 0.2s;
-            display: inline-block;
-        }
-        .button:hover { background: #b85c20; }
-
-        /* HERO */
-        .hero {
-            background: #111813;
-            color: white;
-            padding: 160px 0 140px;
-            text-align: center;
-        }
-        .hero h1 {
-            font-size: 5rem;
-            line-height: 1.15;
-            margin-bottom: 48px;
-            text-transform: uppercase;
-            letter-spacing: -0.02em;
-            font-weight: 900;
-        }
-        .hero h1 span { color: #d4712a; }
-        .hero-copy {
-            font-size: 1.2rem;
-            max-width: 850px;
-            margin: 0 auto 42px;
-            line-height: 1.75;
-            color: rgba(250,248,245,0.9);
-        }
-        .hero-secondary {
-            font-size: 1.1rem;
-            color: rgba(250,248,245,0.75);
-            margin-bottom: 32px;
-        }
-        .hero-actions {
-            margin-bottom: 32px;
-        }
-        .hero-cta {
-            display: inline-block;
-            background: #d4712a;
-            color: white;
-            padding: 18px 44px;
-            font-size: 1.05rem;
-            font-weight: 800;
-            text-transform: uppercase;
-            text-decoration: none;
-            border-radius: 4px;
-            margin: 0 16px;
-            letter-spacing: 0.05em;
-            transition: background 0.2s;
-        }
-        .hero-cta:hover { background: #b85c20; }
-        .hero-cta.secondary {
-            background: transparent;
-            border: 2px solid #d4712a;
-            color: #d4712a;
-        }
-        .hero-cta.secondary:hover { background: rgba(212,113,42,0.1); }
-        .hero-note {
-            margin-top: 32px;
-            font-size: 0.95rem;
-            color: rgba(250,248,245,0.7);
-        }
-
-        /* BRAINSTORM SECTION */
-        .brainstorm {
-            background: white;
-            padding: 120px 0;
-        }
-        .section-head {
-            margin-bottom: 60px;
-        }
-        .section-head h2 {
-            font-size: 3rem;
-            text-transform: uppercase;
-            margin-bottom: 28px;
-            color: #111813;
-            font-weight: 800;
-        }
-        .section-intro {
-            font-size: 1.15rem;
-            max-width: 900px;
-            color: #59615d;
-            line-height: 1.8;
-        }
-        .brainstorm-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 48px;
-        }
-        .brainstorm-item {
-            padding: 48px;
-            background: #f5f0e6;
-            border: 1px solid rgba(44,62,45,0.22);
-            border-radius: 12px;
-        }
-        .brainstorm-item h3 {
-            font-size: 1.5rem;
-            color: #111813;
-            margin-bottom: 18px;
-            font-weight: 800;
-        }
-        .brainstorm-item p {
-            color: #59615d;
-            font-size: 1rem;
-            line-height: 1.75;
-        }
-
-        /* SERVICES SECTION */
-        .services {
-            background: #f5f0e6;
-            padding: 120px 0;
-        }
-        .services h2 {
-            font-size: 3rem;
-            text-transform: uppercase;
-            margin-bottom: 60px;
-            color: #111813;
-            font-weight: 800;
-        }
-        .services-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 48px;
-        }
-        .service-card {
-            background: white;
-            padding: 52px;
-            border-radius: 12px;
-            border: 1px solid rgba(44,62,45,0.15);
-        }
-        .service-card h3 {
-            font-size: 1.6rem;
-            color: #111813;
-            margin-bottom: 20px;
-            text-transform: uppercase;
-            font-weight: 800;
-        }
-        .service-card .accent {
-            display: block;
-            width: 24px;
-            height: 4px;
-            background: #d4712a;
-            margin-bottom: 28px;
-        }
-        .service-card p {
-            color: #59615d;
-            font-size: 1rem;
-            line-height: 1.8;
-            margin-bottom: 28px;
-        }
-        .service-card ul {
-            list-style: none;
-            padding: 0;
-        }
-        .service-card li {
-            padding: 10px 0;
-            padding-left: 24px;
-            position: relative;
-            color: #59615d;
-            font-size: 0.95rem;
-        }
-        .service-card li:before {
-            content: "✓";
-            position: absolute;
-            left: 0;
-            color: #d4712a;
-            font-weight: 900;
-        }
-
-        /* RECOMMENDED TOOLS */
-        .recommended {
-            background: #faf8f5;
-            padding: 100px 0;
-            border-top: 1px solid #ddd;
-            border-bottom: 1px solid #ddd;
-        }
-        .recommended h2 {
-            font-size: 2rem;
-            color: #111813;
-            margin-bottom: 20px;
-            font-weight: 800;
-        }
-        .recommended-intro {
-            color: #59615d;
-            margin-bottom: 50px;
-            max-width: 900px;
-            font-size: 1.05rem;
-            line-height: 1.7;
-        }
-        .tools-showcase {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 28px;
-        }
-        .tool-showcase-item {
-            padding: 32px;
-            background: white;
-            border-radius: 10px;
-            text-align: center;
-            border: 1px solid rgba(44,62,45,0.1);
-        }
-        .tool-showcase-item strong {
-            color: #111813;
-            font-size: 1.1rem;
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 800;
-        }
-        .tool-showcase-item p {
-            font-size: 0.9rem;
-            color: #59615d;
-        }
-
-        /* FREE TOOLS SECTION */
-        .tools-section {
-            background: white;
-            padding: 120px 0;
-        }
-        .tools-section h2 {
-            font-size: 3rem;
-            text-transform: uppercase;
-            margin-bottom: 28px;
-            color: #111813;
-            font-weight: 800;
-        }
-        .tools-intro {
-            font-size: 1.1rem;
-            color: #59615d;
-            margin-bottom: 60px;
-            max-width: 900px;
-            line-height: 1.75;
-        }
-        .tools-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-        }
-        .tool-item {
-            background: #f5f0e6;
-            padding: 40px;
-            border-radius: 10px;
-            border: 1px solid rgba(44,62,45,0.15);
-        }
-        .tool-item h3 {
-            font-size: 1.3rem;
-            color: #111813;
-            margin-bottom: 14px;
-            font-weight: 800;
-        }
-        .tool-item p {
-            color: #59615d;
-            font-size: 1rem;
-            line-height: 1.7;
-        }
-
-        /* ABOUT SECTION */
-        .about {
-            background: #6b7f5e;
-            color: white;
-            padding: 120px 0;
-        }
-        .about h2 {
-            font-size: 3rem;
-            text-transform: uppercase;
-            margin-bottom: 40px;
-            color: white;
-            font-weight: 800;
-        }
-        .about-content {
-            max-width: 1000px;
-            font-size: 1.1rem;
-            line-height: 1.85;
-            color: rgba(250,248,245,0.95);
-        }
-        .about-content p {
-            margin-bottom: 28px;
-        }
-
-        /* FINAL CTA */
-        .final-cta {
-            background: #111813;
-            color: white;
-            padding: 100px 0;
-            text-align: center;
-        }
-        .final-cta h2 {
-            font-size: 2.8rem;
-            text-transform: uppercase;
-            color: white;
-            margin-bottom: 24px;
-            font-weight: 800;
-        }
-        .final-cta p {
-            font-size: 1.1rem;
-            color: rgba(250,248,245,0.8);
-            margin-bottom: 40px;
-        }
-
-        /* FOOTER */
-        footer {
-            background: #0d120e;
-            color: rgba(250,248,245,0.72);
-            padding: 44px 0;
-            border-top: 1px solid rgba(255,255,255,0.08);
-        }
-        .footer-inner {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-size: 0.85rem;
-        }
-        .footer-links {
-            display: flex;
-            gap: 40px;
-        }
-        .footer-links a {
-            color: rgba(250,248,245,0.72);
-            text-decoration: none;
-            transition: color 0.2s;
-        }
-        .footer-links a:hover {
-            color: white;
-        }
-
-        /* RESPONSIVE */
-        @media (max-width: 1200px) {
-            .container { padding: 0 30px; }
-            .brainstorm-grid, .services-grid, .tools-grid { gap: 36px; }
-            .brainstorm-item, .service-card { padding: 40px; }
-        }
-
-        @media (max-width: 768px) {
-            .container { padding: 0 24px; }
-            .site-nav { gap: 20px; font-size: 0.85rem; }
-            .site-nav a:not(.button) { display: none; }
-            .hero { padding: 100px 0 80px; }
-            .hero h1 { font-size: 2.8rem; margin-bottom: 32px; }
-            .hero-copy { font-size: 1.05rem; margin-bottom: 28px; }
-            .hero-cta { display: block; margin: 12px 0; width: 100%; text-align: center; }
-            .brainstorm, .services, .tools-section, .about { padding: 80px 0; }
-            .section-head h2, .services h2, .tools-section h2, .about h2 { font-size: 2rem; margin-bottom: 32px; }
-            .section-intro { font-size: 1rem; }
-            .brainstorm-grid, .services-grid, .tools-grid { grid-template-columns: 1fr; gap: 32px; }
-            .brainstorm-item, .service-card { padding: 32px; }
-            .service-card h3 { font-size: 1.3rem; }
-            .tools-showcase { grid-template-columns: 1fr 1fr; gap: 20px; }
-            .tool-showcase-item { padding: 24px; }
-            .final-cta { padding: 80px 0; }
-            .final-cta h2 { font-size: 2rem; }
-            .footer-inner { flex-direction: column; gap: 20px; text-align: center; }
-            .footer-links { flex-direction: column; gap: 16px; }
-        }
-
-        @media (max-width: 600px) {
-            .container { padding: 0 20px; }
-            .hero { padding: 60px 0 50px; }
-            .hero h1 { font-size: 2rem; margin-bottom: 20px; line-height: 1.1; }
-            .hero-copy { font-size: 0.95rem; margin-bottom: 20px; }
-            .hero-secondary { font-size: 1rem; margin-bottom: 20px; }
-            .hero-actions { margin-bottom: 20px; }
-            .hero-cta { padding: 14px 24px; font-size: 0.9rem; margin: 8px 0; }
-            .hero-note { font-size: 0.85rem; margin-top: 20px; }
-            .brainstorm, .services, .tools-section, .about, .final-cta { padding: 60px 0; }
-            .section-head h2, .services h2, .tools-section h2, .about h2, .final-cta h2 { font-size: 1.6rem; margin-bottom: 20px; }
-            .section-intro, .tools-intro, .recommended-intro { font-size: 0.95rem; margin-bottom: 32px; }
-            .brainstorm-grid, .services-grid, .tools-grid { gap: 20px; }
-            .brainstorm-item { padding: 28px; }
-            .service-card { padding: 28px; }
-            .service-card h3 { font-size: 1.2rem; }
-            .service-card p { font-size: 0.9rem; margin-bottom: 16px; }
-            .service-card li { font-size: 0.85rem; padding: 8px 0 8px 20px; }
-            .tool-item { padding: 28px; }
-            .tool-item h3 { font-size: 1.1rem; }
-            .tools-showcase { grid-template-columns: 1fr; gap: 16px; }
-            .tool-showcase-item { padding: 20px; }
-            .tool-showcase-item strong { font-size: 1rem; }
-            .tool-showcase-item p { font-size: 0.85rem; }
-            .about-content { font-size: 0.95rem; }
-            .about-content p { margin-bottom: 16px; }
-            .final-cta p { font-size: 1rem; margin-bottom: 24px; }
-        }
-
-        /* BUSINESS LAUNCH PACKAGE */
-        .launch-package {
-            background: white;
-            padding: 120px 0;
-            border-bottom: 1px solid #ddd;
-        }
-        .launch-package-head {
-            text-align: center;
-            margin-bottom: 80px;
-        }
-        .launch-package-head h2 {
-            font-size: 2.2rem;
-            text-transform: uppercase;
-            color: #111813;
-            margin-bottom: 12px;
-            font-weight: 800;
-        }
-        .launch-package-head .subtitle {
-            font-size: 1.2rem;
-            color: #59615d;
-            max-width: 800px;
-            margin: 0 auto;
-            line-height: 1.7;
-        }
-        .package-benefits {
-            background: #f5f0e6;
-            padding: 48px 52px;
-            border-radius: 12px;
-            margin-bottom: 60px;
-            max-width: 900px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        .package-benefits h3 {
-            font-size: 1.1rem;
-            color: #111813;
-            font-weight: 800;
-            margin-bottom: 28px;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-        }
-        .benefits-list {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px 40px;
-        }
-        .benefits-list li {
-            list-style: none;
-            padding-left: 28px;
-            position: relative;
-            color: #59615d;
-            font-size: 1rem;
-            line-height: 1.6;
-        }
-        .benefits-list li:before {
-            content: "✓";
-            position: absolute;
-            left: 0;
-            color: #d4712a;
-            font-weight: 900;
-            font-size: 1.2rem;
-        }
-        .package-details {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 48px;
-            max-width: 1100px;
-            margin: 0 auto;
-        }
-        .package-detail-item h4 {
-            font-size: 1.1rem;
-            color: #111813;
-            font-weight: 800;
-            margin-bottom: 16px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        .package-detail-item h4:before {
-            content: "";
-            display: block;
-            width: 12px;
-            height: 12px;
-            background: #d4712a;
-            border-radius: 2px;
-        }
-        .package-detail-item ul {
-            list-style: none;
-            padding: 0;
-            margin: 0 0 40px 0;
-        }
-        .package-detail-item li {
-            padding: 8px 0 8px 24px;
-            position: relative;
-            color: #59615d;
-            font-size: 0.95rem;
-            line-height: 1.6;
-        }
-        .package-detail-item li:before {
-            content: "→";
-            position: absolute;
-            left: 0;
-            color: #d4712a;
-            font-weight: 900;
-        }
-
-        @media (max-width: 768px) {
-            .launch-package { padding: 80px 0; }
-            .launch-package-head h2 { font-size: 1.8rem; }
-            .launch-package-head .subtitle { font-size: 1rem; }
-            .package-benefits { padding: 32px; margin-bottom: 48px; }
-            .benefits-list { grid-template-columns: 1fr; gap: 16px; }
-            .package-details { grid-template-columns: 1fr; gap: 32px; }
-            .package-detail-item { margin-bottom: 20px; }
-        }
-
-        @media (max-width: 600px) {
-            .launch-package { padding: 60px 0; }
-            .launch-package-head h2 { font-size: 1.4rem; margin-bottom: 8px; }
-            .launch-package-head .subtitle { font-size: 0.95rem; }
-            .package-benefits { padding: 24px; }
-            .package-benefits h3 { font-size: 0.95rem; margin-bottom: 16px; }
-            .benefits-list li { font-size: 0.9rem; padding-left: 24px; }
-            .package-detail-item h4 { font-size: 1rem; margin-bottom: 12px; }
-            .package-detail-item li { font-size: 0.9rem; padding: 6px 0 6px 20px; }
-        }
-    </style>
+    <link rel="stylesheet" href="/assets/brand.css">
+    <link rel="stylesheet" href="/assets/home.css">
+    <link rel="stylesheet" href="/assets/auth.css">
 
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <link rel="canonical" href="https://justjakey.online/">
@@ -600,286 +36,127 @@
     }
     </script>
 </head>
-<body>
-    <!-- HEADER -->
-    <header class="site-header">
-        <div class="container header-inner">
-            <a class="wordmark" href="/">JUST JAKEY</a>
-            <nav class="site-nav">
-                <a href="#services">Services</a>
-                <a href="#about">About</a>
-                <a href="#tools">Free Tools</a>
-                <a href="https://tally.so/r/0QKvaN" class="button">Onboard with Me</a>
-                <a href="https://wa.me/61472544399" class="button">Let's Talk</a>
-            </nav>
-        </div>
-    </header>
+<body class="jj-site jj-home"><a class="jj-skip" href="#main">Skip to content</a>
+    <header class="site-header"><nav aria-label="Main navigation"><a href="/">JUST JAKEY</a></nav></header>
 
-    <main>
-        <!-- HERO -->
-        <section class="hero" id="top">
-            <div class="container">
-                <h1>Simple Systems. <span>Sorted.</span></h1>
-                <p class="hero-copy">
-                    Stop wasting your time doing the same work twice. If you're running on excuses and manual processes, it's time to automate. I help small businesses implement simple, straightforward systems that actually work — taking you from basic to medium level operation.
-                </p>
-                <p class="hero-secondary">
-                    No CEO speak. No massive change programs. Just practical work that solves the problem.
-                </p>
-                <div class="hero-actions">
-                    <a href="https://wa.me/61472544399" class="hero-cta">Let's Talk</a>
-                    <a href="#tools" class="hero-cta secondary">Free Tools</a>
-                </div>
-                <p class="hero-note">If a project's beyond my scope, I'll connect you with someone who can help — or lead it with an outsourced team.</p>
-            </div>
-        </section>
-
-        <!-- BUSINESS LAUNCH PACKAGE -->
-        <section class="launch-package" id="onboarding">
-            <div class="container">
-                <div class="launch-package-head">
-                    <h2>Just Jakey — Business Launch Package</h2>
-                    <p class="subtitle">A complete set up and package that is simple and straightforward for people moving forward and launching into the tech world.</p>
-                </div>
-
-                <div class="package-benefits">
-                    <h3>You Get</h3>
-                    <ul class="benefits-list">
-                        <li>Someone who speaks plain English, not tech speak</li>
-                        <li>Step-by-step help so you're not figuring it out alone</li>
-                        <li>Everything set up properly before you start taking clients</li>
-                        <li>Tools that actually save you time</li>
-                        <li>Confidence that you've got the foundations right</li>
+    <main id="main">
+        <section class="jj-hero" id="top">
+            <div class="jj-wrap jj-hero__grid">
+                <div>
+                    <span class="jj-eyebrow">Australian small business support</span>
+                    <h1>Simple systems.<br>Sorted.</h1>
+                    <p class="jj-lead">Stop doing the same work twice. I help small businesses set up simple, straightforward systems that actually work, from basic to medium-level operation.</p>
+                    <div class="jj-cta">
+                        <a href="https://wa.me/61472544399" class="jj-btn jj-btn--primary"><i data-lucide="message-circle" aria-hidden="true"></i>Let's talk</a>
+                        <a href="/free-tools/" class="jj-btn jj-btn--secondary">Try the free tools <i data-lucide="arrow-right" aria-hidden="true"></i></a>
+                    </div>
+                    <ul class="jj-proof">
+                        <li><i data-lucide="check" aria-hidden="true"></i>No CEO speak</li>
+                        <li><i data-lucide="check" aria-hidden="true"></i>No massive change programs</li>
+                        <li><i data-lucide="check" aria-hidden="true"></i>Just practical fixes</li>
                     </ul>
                 </div>
-
-                <div class="package-details">
-                    <div class="package-detail-item">
-                        <h4>Get Your Domain & Email</h4>
-                        <ul>
-                            <li>Help you pick and register a domain (.com.au, .com, .live, .org, etc.)</li>
-                            <li>Set you up with a professional email (yourname@yourbusiness.com.au)</li>
-                            <li>Make sure it all connects properly</li>
-                        </ul>
-                    </div>
-
-                    <div class="package-detail-item">
-                        <h4>Get Online</h4>
-                        <ul>
-                            <li>Set up your Google Business listing</li>
-                            <li>Create your Facebook page</li>
-                            <li>Create your Instagram page</li>
-                            <li>Show you how to use them without overthinking it</li>
-                        </ul>
-                    </div>
-
-                    <div class="package-detail-item">
-                        <h4>Brand & Look</h4>
-                        <ul>
-                            <li>Help you understand the brand tools that are out there</li>
-                            <li>Keep it simple — you don't need to be a designer</li>
-                            <li>Get your visual stuff sorted so you look professional</li>
-                        </ul>
-                    </div>
-
-                    <div class="package-detail-item">
-                        <h4>If You Wish to Implement AI, I Can Assist With This For You</h4>
-                        <ul>
-                            <li>Set up project groups so AI tools fit into your workflow</li>
-                            <li>Give acknowledgement where it's due</li>
-                            <li>Make sure it stays relevant to your business and your clients</li>
-                            <li>Nothing complicated — just practical stuff that works</li>
-                        </ul>
-                    </div>
-
-                    <div class="package-detail-item">
-                        <h4>Set Up Your Business Systems</h4>
-                        <ul>
-                            <li>Get Xero accounting set up so you can track your money</li>
-                            <li>Show you how to use it without the confusion</li>
-                            <li>Get everything connected and running</li>
-                        </ul>
-                    </div>
-
-                    <div class="package-detail-item">
-                        <h4>Everything Else You Need</h4>
-                        <ul>
-                            <li>Help with other Australian business tools you'll actually use day-to-day</li>
-                            <li>No BS — just what you actually need</li>
-                        </ul>
+                <div class="jj-panel">
+                    <span class="jj-eyebrow">Start here</span>
+                    <h2 class="jj-panel__title">What's doing your head in?</h2>
+                    <p>Pick the closest problem. I'll point you to the right first step.</p>
+                    <div class="jj-opt">
+                        <a href="/stop-doing-it-twice/"><i data-lucide="repeat-2" aria-hidden="true"></i>Doing things twice</a>
+                        <a href="/business-sort-out-map/"><i data-lucide="list-checks" aria-hidden="true"></i>No clear process</a>
+                        <a href="/find-fix-wasted-time/"><i data-lucide="search" aria-hidden="true"></i>Not sure what to fix</a>
+                        <a href="/website-setup/"><i data-lucide="globe" aria-hidden="true"></i>Hard to get found</a>
+                        <a href="/people-hub/"><i data-lucide="users" aria-hidden="true"></i>People or team issue</a>
+                        <a href="/ai-guide/"><i data-lucide="bot" aria-hidden="true"></i>Make AI useful</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- BRAINSTORM -->
-        <section class="brainstorm">
-            <div class="container">
-                <div class="section-head">
-                    <h2>Things We Can Brainstorm Together</h2>
-                    <p class="section-intro">
-                        Your phone won't stop ringing. Voicemails piling up. Ding ding ding all day. People contact you but they don't get what they need, so they call back. Here's what we figure out together:
-                    </p>
-                </div>
-                <div class="brainstorm-grid">
-                    <div class="brainstorm-item">
-                        <h3>Streamline Your Contact Points</h3>
-                        <p>How can we make it less time-consuming for people to reach you? Auto-replies with enough info so they don't need to call back. Multiple channels so it's not all hitting your phone. Routing that gets the right person the first time.</p>
-                    </div>
-                    <div class="brainstorm-item">
-                        <h3>Communication Flow</h3>
-                        <p>Do you have an auto-reply on Saturday and Sunday that actually solves their problem? Or are they stuck waiting? We build out responses that handle the common stuff so you're not getting calls for things already answered.</p>
-                    </div>
-                    <div class="brainstorm-item">
-                        <h3>Subscription & Tool Audit</h3>
-                        <p>What are you paying for? Most businesses have redundant tools or subscriptions they forgot about. We audit everything and consolidate so your money goes where it matters.</p>
-                    </div>
-                    <div class="brainstorm-item">
-                        <h3>What You're Doing Twice</h3>
-                        <p>Where are your people wasting time? Entering the same data twice? Chasing the same information? We find it and figure out what's worth fixing first.</p>
-                    </div>
+        <section class="jj-sec" id="services">
+            <div class="jj-wrap">
+                <div class="jj-sh"><div><span class="jj-eyebrow">How I help</span><h2>Three ways to get it sorted</h2></div><a class="jj-go" href="/what-we-sort-out/">What we sort out →</a></div>
+                <div class="jj-cards">
+                    <article class="jj-card"><span class="jj-icon-tile"><i data-lucide="wrench" aria-hidden="true"></i></span><h3>Free tools</h3><p>13 practical tools. No email wall. Leave with a clear next action.</p><div class="jj-meta"><span>5–15 min</span><span>Free</span></div><a class="jj-go" href="/free-tools/">Browse tools <i data-lucide="arrow-right" aria-hidden="true"></i></a></article>
+                    <article class="jj-card"><span class="jj-icon-tile"><i data-lucide="package" aria-hidden="true"></i></span><h3>Business in a Box</h3><p>A personalised $99 setup pack: brand, online presence, customer journey and systems.</p><div class="jj-meta"><span>$99 AUD</span><span>Follow-up call</span></div><a class="jj-go" href="/business-in-a-box/">See what you get <i data-lucide="arrow-right" aria-hidden="true"></i></a></article>
+                    <article class="jj-card"><span class="jj-icon-tile"><i data-lucide="settings" aria-hidden="true"></i></span><h3>Implementation support</h3><p>Bring the mess. I scope the smallest useful fix, build it and hand it over.</p><div class="jj-meta"><span>Prompts</span><span>SOPs</span><span>Automation</span></div><a class="jj-go" href="/implementation-support/">Start a request <i data-lucide="arrow-right" aria-hidden="true"></i></a></article>
                 </div>
             </div>
         </section>
 
-        <!-- SERVICES -->
-        <section class="services" id="services">
-            <div class="container">
-                <h2>How I Help</h2>
-                <div class="services-grid">
-                    <div class="service-card">
-                        <span class="accent"></span>
-                        <h3>Automation & Efficiency</h3>
-                        <p>Build out what you're currently doing twice. Identify gaps where time is getting lost. Set up automation together or pass work off to someone who specializes in it. Like auto-replies on weekends that actually answer their questions so they don't need to call back.</p>
-                        <ul>
-                            <li>Find your repetitive work</li>
+        <section class="jj-sec jj-sec--card" id="what-i-work-on">
+            <div class="jj-wrap">
+                <div class="jj-sh"><div><span class="jj-eyebrow">What I work on</span><h2>Where the time goes</h2></div></div>
+                <div class="jj-cards jj-cards--4">
+                    <article class="jj-card jj-card--light"><h3>Automation & Efficiency</h3><p>Build out what you're currently doing twice. Identify gaps where time is getting lost. Set up automation together or pass work off to someone who specializes in it. Like auto-replies on weekends that actually answer their questions so they don't need to call back.</p><ul class="jj-list"><li>Find your repetitive work</li>
                             <li>Time-saving opportunities audit</li>
                             <li>Build or pass off the fix</li>
-                            <li>Setup & training</li>
-                        </ul>
-                    </div>
-                    <div class="service-card">
-                        <span class="accent"></span>
-                        <h3>Website & Domain Setup</h3>
-                        <p>DNS, domain configuration, email setup — make sure your website and communication platforms sync together. Link Shopify with automation. Platform integration. Website code or mockup. Whatever connects your business properly.</p>
-                        <ul>
-                            <li>DNS & domain management</li>
+                            <li>Setup & training</li></ul></article>
+                    <article class="jj-card jj-card--light"><h3>Website & Domain Setup</h3><p>DNS, domain configuration, email setup — make sure your website and communication platforms sync together. Link Shopify with automation. Platform integration. Website code or mockup. Whatever connects your business properly.</p><ul class="jj-list"><li>DNS & domain management</li>
                             <li>Email setup & routing</li>
                             <li>Platform integration</li>
-                            <li>Website code or mockup</li>
-                        </ul>
-                    </div>
-                    <div class="service-card">
-                        <span class="accent"></span>
-                        <h3>Tech Implementation</h3>
-                        <p>Basic configuration and onboarding. Not big enterprise tech — think Google Workspace, Google Gemini, WhatsApp for Business, Twilio Flex web chat, Slack workplace solutions. Help you maximize what you've got, not just evaluate what's next.</p>
-                        <ul>
-                            <li>Setup & configuration</li>
+                            <li>Website code or mockup</li></ul></article>
+                    <article class="jj-card jj-card--light"><h3>Tech Implementation</h3><p>Basic configuration and onboarding. Not big enterprise tech — think Google Workspace, Google Gemini, WhatsApp for Business, Twilio Flex web chat, Slack workplace solutions. Help you maximize what you've got, not just evaluate what's next.</p><ul class="jj-list"><li>Setup & configuration</li>
                             <li>Team onboarding</li>
                             <li>Sourcing & research</li>
-                            <li>Maximize what you have</li>
-                        </ul>
-                    </div>
-                    <div class="service-card">
-                        <span class="accent"></span>
-                        <h3>Backup & Continuity</h3>
-                        <p>What happens when something breaks? Do you have backups? Failover options? Documented processes so someone else can handle it? We make sure you're not one system failure away from chaos.</p>
-                        <ul>
-                            <li>Backup strategy</li>
+                            <li>Maximize what you have</li></ul></article>
+                    <article class="jj-card jj-card--light"><h3>Backup & Continuity</h3><p>What happens when something breaks? Do you have backups? Failover options? Documented processes so someone else can handle it? We make sure you're not one system failure away from chaos.</p><ul class="jj-list"><li>Backup strategy</li>
                             <li>Failover planning</li>
                             <li>Documentation</li>
-                            <li>Peace of mind</li>
-                        </ul>
-                    </div>
+                            <li>Peace of mind</li></ul></article>
                 </div>
             </div>
         </section>
 
-        <!-- RECOMMENDED TOOLS -->
-        <section class="recommended">
-            <div class="container">
-                <h2>Tools We Like to Work With</h2>
-                <p class="recommended-intro">These are the platforms and tools we bounce off when building your systems. Some are free, some paid, all solid.</p>
-                <div class="tools-showcase">
-                    <div class="tool-showcase-item">
-                        <strong>Claude</strong>
-                        <p>AI for writing, thinking & automation</p>
-                    </div>
-                    <div class="tool-showcase-item">
-                        <strong>Google Gemini</strong>
-                        <p>AI assistant & integration</p>
-                    </div>
-                    <div class="tool-showcase-item">
-                        <strong>Google Workspace</strong>
-                        <p>Email, docs, sheets & more</p>
-                    </div>
-                    <div class="tool-showcase-item">
-                        <strong>WhatsApp Business</strong>
-                        <p>Customer communication</p>
-                    </div>
-                    <div class="tool-showcase-item">
-                        <strong>Twilio Flex</strong>
-                        <p>Call routing & web chat</p>
-                    </div>
-                    <div class="tool-showcase-item">
-                        <strong>Slack</strong>
-                        <p>Team communication hub</p>
-                    </div>
+        <section class="jj-sec" id="brainstorm">
+            <div class="jj-wrap">
+                <div class="jj-sh"><div><span class="jj-eyebrow">Let's work it out</span><h2>Things we can brainstorm together</h2></div></div>
+                <p class="jj-intro">Your phone won't stop ringing. Voicemails piling up. Ding ding ding all day. People contact you but they don't get what they need, so they call back. Here's what we figure out together:</p>
+                <div class="jj-cards jj-cards--2">
+                    <article class="jj-card"><h3>Streamline Your Contact Points</h3><p>How can we make it less time-consuming for people to reach you? Auto-replies with enough info so they don't need to call back. Multiple channels so it's not all hitting your phone. Routing that gets the right person the first time.</p></article>
+                    <article class="jj-card"><h3>Communication Flow</h3><p>Do you have an auto-reply on Saturday and Sunday that actually solves their problem? Or are they stuck waiting? We build out responses that handle the common stuff so you're not getting calls for things already answered.</p></article>
+                    <article class="jj-card"><h3>Subscription & Tool Audit</h3><p>What are you paying for? Most businesses have redundant tools or subscriptions they forgot about. We audit everything and consolidate so your money goes where it matters.</p></article>
+                    <article class="jj-card"><h3>What You're Doing Twice</h3><p>Where are your people wasting time? Entering the same data twice? Chasing the same information? We find it and figure out what's worth fixing first.</p></article>
                 </div>
             </div>
         </section>
 
-        <!-- FREE TOOLS -->
-        <section class="tools-section" id="tools">
-            <div class="container">
-                <h2>Free Tools To Get Started</h2>
-                <p class="tools-intro">No email wall. Pick the tool that matches your situation and get a practical output straight away.</p>
-                <div class="tools-grid">
-                    <div class="tool-item">
-                        <h3>Find & Fix Your Wasted Time</h3>
-                        <p>See what you're doing twice, how many hours it costs, and what's worth fixing first. Turn your problems into a sensible order of attack.</p>
-                        <a href="/find-fix-wasted-time/" style="color: #d4712a; font-weight: 800; font-size: 0.9rem; text-decoration: none; text-transform: uppercase; letter-spacing: 0.05em; display: inline-block; border-bottom: 2px solid #d4712a; padding-bottom: 4px;">Use Tool →</a>
-                    </div>
-                    <div class="tool-item">
-                        <h3>Brand Colour Picker</h3>
-                        <p>Create a consistent brand palette with complementary colors that work together. Download your palette and get color codes for web and print.</p>
-                        <a href="/brand-colour-picker/" style="color: #d4712a; font-weight: 800; font-size: 0.9rem; text-decoration: none; text-transform: uppercase; letter-spacing: 0.05em; display: inline-block; border-bottom: 2px solid #d4712a; padding-bottom: 4px;">Use Tool →</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ABOUT -->
-        <section class="about" id="about">
-            <div class="container">
-                <h2>This Is For You If…</h2>
-                <div class="about-content">
+        <section class="jj-sec jj-sec--card" id="about">
+            <div class="jj-wrap jj-about">
+                <div><span class="jj-eyebrow">About</span><h2>This is for you if…</h2></div>
+                <div>
                     <p>You're a small to medium business owner or operator. You want cleaner handoffs, fewer repetitive tasks, and someone to give you advice on a normal business budget. You want straightforward, practical work. No complicated buzzwords. No techlingo. Just honest help that makes sense for your business.</p>
-                    <p><strong>We work basic to medium level.</strong> If a project gets complex or outside my wheelhouse, I tell you straight. I'll either connect you with someone who specializes in it, or I'll lead the project with an outsourced team so you still get it done right. No surprises.</p>
+                    <p><strong>We work basic to medium level.</strong> If a project gets complex or outside my wheelhouse, I tell you straight. I'll either connect you with someone who specialises in it, or I'll lead the project with an outsourced team so you still get it done right. No surprises.</p>
                 </div>
             </div>
         </section>
 
-        <!-- FINAL CTA -->
-        <section class="final-cta">
-            <div class="container">
-                <h2>Ready To Sort It Out?</h2>
-                <p>Let's brainstorm what's possible for your business and communication setup.</p>
-                <a href="https://wa.me/61472544399" class="hero-cta">Let's Talk</a>
+        <section class="jj-sec" id="tools-we-like">
+            <div class="jj-wrap">
+                <div class="jj-sh"><div><span class="jj-eyebrow">Tools</span><h2>Tools I like to work with</h2></div></div>
+                <p class="jj-intro">These are the platforms I bounce off when building your systems. Some are free, some paid, all solid.</p>
+                <ul class="jj-chips">
+                    <li><strong>Claude</strong><span>AI for writing, thinking & automation</span></li>
+                    <li><strong>Google Gemini</strong><span>AI assistant & integration</span></li>
+                    <li><strong>Google Workspace</strong><span>Email, docs, sheets & more</span></li>
+                    <li><strong>WhatsApp Business</strong><span>Customer communication</span></li>
+                    <li><strong>Twilio Flex</strong><span>Call routing & web chat</span></li>
+                    <li><strong>Slack</strong><span>Team communication hub</span></li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="jj-final">
+            <div class="jj-wrap jj-final__inner">
+                <div><h2>Ready to get it sorted?</h2><p>Send the problem as it is. You don't need a polished brief.</p></div>
+                <div class="jj-cta"><a href="https://tally.so/r/Bz5xN7" class="jj-btn jj-btn--on-green">Review my business</a><a href="https://wa.me/61472544399" class="jj-btn jj-btn--outline-on-green"><i data-lucide="message-circle" aria-hidden="true"></i>Message Jake</a></div>
             </div>
         </section>
     </main>
 
-    <!-- FOOTER -->
-    <footer>
-        <div class="container footer-inner">
-            <div>&copy; 2025 Just Jakey. All rights reserved.</div>
-            <div class="footer-links">
-                <a href="/privacy/">Privacy</a>
-                <a href="/connect/">Contact</a>
-                <a href="/people-hub/">Team Resources</a>
-            </div>
-        </div>
-    </footer>
+    <footer></footer>
+    <script src="/assets/lucide.min.js"></script>
+    <script>window.lucide && lucide.createIcons();</script>
+    <script src="/assets/tool-shell.js?v=20261016-brand2"></script>
+    <script src="/assets/auth.js" type="module"></script>
 </body>
 </html>
