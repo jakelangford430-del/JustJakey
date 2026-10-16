@@ -249,3 +249,9 @@ body.jj-site ::selection { color: var(--jj2-cream); background: var(--jj2-green)
 .jj-card--featured { box-shadow: inset 0 4px 0 var(--jj2-rust); }
 .jj-final h2::before { content: ""; display: block; width: 40px; height: 4px; margin-bottom: 14px; border-radius: 2px; background: var(--jj2-rust); }
 .jj-btn--outline-on-green:hover { box-shadow: inset 0 0 0 2px var(--jj2-rust); }
+/* Footer lockup: mark + wordmark + slogan (sentence case, Inter, never rust) */
+.jj-tool-footer__brand { display: inline-flex; align-items: center; gap: 12px; }
+.jj-tool-footer__brand img { width: 36px; height: 36px; border-radius: 8px; box-shadow: 0 0 0 1.5px rgba(245,240,230,.4); }
+.jj-tool-footer__brand > span { display: grid; gap: 2px; }
+.jj-tool-footer__slogan { color: var(--jj2-on-green-muted); font: 400 14px/1.3 var(--jj2-font-body); text-transform: none; letter-spacing: 0; }
+.jj-tool-footer__name { font: 700 1.35rem/1 var(--jj2-font-display); letter-spacing: .04em; }

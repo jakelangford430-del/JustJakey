@@ -20,7 +20,7 @@ function showView(id){views.forEach(v=>$(v).classList.toggle('hidden',v!==id));w
 function save(){localStorage.setItem(STORAGE_KEY,JSON.stringify(state));$('saved-label')?.classList.remove('hidden')}
 function load(){try{const saved=JSON.parse(localStorage.getItem(STORAGE_KEY));if(saved){state.step=saved.step||0;state.answers=saved.answers||{};return true}}catch{}return false}
 function adviceFor(q){
- if(q.id==='sensitiveRole')return `<aside class="advice-card"><h2>Checks come before the offer, not after.</h2><p>If this role involves children, vulnerable people or driving, a Working With Children Check, police check or licence verification is normally required before you make an offer—not something to sort out later. Confirm the current requirement for your state.</p></aside>`;
+ if(q.id==='sensitiveRole')return `<aside class="advice-card"><h2>Checks come before the offer, not after.</h2><p>If this role involves children, vulnerable people or driving, a Working With Children Check, police check or licence verification is normally required before you make an offer—not something to fix later. Confirm the current requirement for your state.</p></aside>`;
  if(q.id==='confidence'&&['nervous','first'].includes(state.answers.confidence))return `<aside class="advice-card"><h2>You don’t need to wing it.</h2><p>A written question set and a simple scoring approach make you look more prepared than most small businesses hiring for the first time—and it’s fairer to candidates too.</p></aside>`;
  return '';
 }

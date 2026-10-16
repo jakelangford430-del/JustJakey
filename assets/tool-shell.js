@@ -69,7 +69,7 @@
           '</div>'+
         '</nav>'+
         '<div class="jj-tool-footer__bottom">'+
-          '<a class="jj-tool-footer__brand" href="'+prefix+'">JUST JAKEY</a>'+
+          '<a class="jj-tool-footer__brand" href="'+prefix+'" aria-label="Just Jakey home"><img src="/assets/brand/jj-mark.svg" width="36" height="36" alt=""><span><span class="jj-tool-footer__name">JUST JAKEY</span><span class="jj-tool-footer__slogan">Friendly help for launches and small-to-medium projects.</span></span></a>'+
           '<span>© 2026 Just Jakey · <a href="'+prefix+'privacy/">Privacy Policy</a></span>'+
         '</div>'+
       '</div>';
