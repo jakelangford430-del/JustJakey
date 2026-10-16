@@ -74,3 +74,18 @@
   .jj-cta .jj-btn { flex: 1 1 100%; }
   .jj-final h2 { font-size: 36px; }
 }
+
+/* Guides: learn-as-you-go templates */
+.jj-guides { background: var(--jj2-card); }
+.jj-guides__lead { max-width: 640px; margin-top: 12px !important; color: var(--jj2-muted); font-size: 17px; }
+.jj-guide-list { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--jj2-s4); margin: 0; padding: 0; list-style: none; }
+.jj-guide { display: flex; align-items: flex-start; gap: 14px; height: 100%; padding: var(--jj2-s5); border-radius: var(--jj2-r-lg); background: var(--jj2-cream); color: var(--jj2-forest); text-decoration: none; box-shadow: inset 4px 0 0 var(--jj2-rust); transition: background .15s; }
+.jj-guide:hover { background: #fff; }
+.jj-guide__body { display: grid; gap: 4px; flex: 1; }
+.jj-guide__tag { color: var(--jj2-muted); font-size: 12px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
+.jj-guide strong { color: var(--jj2-green); font: 700 22px/1.05 var(--jj2-font-display); text-transform: uppercase; }
+.jj-guide__desc { color: var(--jj2-muted); font-size: 15px; }
+.jj-guide svg.jj-guide__arrow { margin-top: 2px; color: var(--jj2-green); }
+.jj-guide:hover svg.jj-guide__arrow { transform: translateX(3px); }
+@media (max-width: 960px) { .jj-guide-list { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 640px) { .jj-guide-list { grid-template-columns: 1fr; gap: var(--jj2-s3); } .jj-guide { padding: var(--jj2-s4); } .jj-guides .jj-sh .jj-go { order: 3; } }
