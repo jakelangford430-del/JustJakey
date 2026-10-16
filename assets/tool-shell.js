@@ -60,7 +60,7 @@
             '<a href="'+prefix+'software-stack/">No-BS Software Stack</a>'+
             '<a href="'+prefix+'ai-guide/">The No-BS AI Guide</a>'+
             '<a href="'+prefix+'implementation-support/">Implementation Support</a>'+
-            '<a href="'+prefix+'business-in-a-box/">Business in a Box</a>'+
+            '<a href="'+prefix+'#implementation-help">Implementation help</a>'+
           '</div>'+
           '<div class="jj-tool-footer__group"><h3>Get in touch</h3>'+
             '<a href="'+prefix+'#jake">Meet Jake</a>'+

@@ -90,8 +90,6 @@
   document.head.appendChild(style);
 
   const path = window.location.pathname.replace(/\/index\.html$/, "/");
-  // business-in-a-box/ is deliberately excluded: it's a paid landing page with its
-  // own Tally funnel, and this strip's free-review CTA competes with that funnel.
   const supportStripPaths = [
     "/free-tools/",
     "/what-we-sort-out/",

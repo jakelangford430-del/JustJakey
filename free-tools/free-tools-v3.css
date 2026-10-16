@@ -58,3 +58,6 @@
   .ft-soon { min-height: 0; padding: 12px; }
   .ft-soon h3 { font-size: 15px !important; }
 }
+
+/* Only People Hub remains in the held section */
+.ft-held { grid-template-columns: minmax(0, 640px); }

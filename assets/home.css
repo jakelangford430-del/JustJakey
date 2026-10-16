@@ -95,3 +95,13 @@
 .jj-guide--soon:hover { background: var(--jj2-cream); }
 .jj-guide--soon strong { color: var(--jj2-muted); }
 .jj-guide__pill { align-self: flex-start; padding: 3px 9px; border-radius: 999px; background: var(--jj2-green); color: var(--jj2-cream); font: 600 11.5px/1.3 var(--jj2-font-body); white-space: nowrap; }
+
+/* What I can help you implement */
+.jj-impl-list { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--jj2-s4); margin: 0; padding: 0; list-style: none; }
+.jj-impl { display: flex; align-items: flex-start; gap: 14px; padding: var(--jj2-s5); border-radius: var(--jj2-r-lg); background: var(--jj2-cream); }
+.jj-impl h3 { font-size: 20px; }
+.jj-impl p { margin-top: 6px !important; color: var(--jj2-muted); font-size: 14.5px; }
+.jj-impl--else { background: transparent; box-shadow: inset 0 0 0 1.5px var(--jj2-sage); }
+.jj-impl--else .jj-go { margin-top: 12px; }
+@media (max-width: 960px) { .jj-impl-list { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 640px) { .jj-impl-list { grid-template-columns: 1fr; gap: var(--jj2-s3); } .jj-impl { padding: var(--jj2-s4); } #implementation-help .jj-sh .jj-btn { order: 3; width: 100%; } }
