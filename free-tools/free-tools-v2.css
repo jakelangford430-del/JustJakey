@@ -53,3 +53,9 @@
   .hero-proof { grid-template-columns: 1fr; }
 }
 .tool-card > .tool-card__link { background: var(--jj2-green) !important; color: var(--jj2-cream) !important; text-decoration: none; }
+/* Rust accents (v2.1) */
+.start-tag { padding: 4px 9px; border-radius: var(--jj2-r-pill); background: var(--jj2-rust); color: var(--jj2-forest); }
+.start-tag::before { display: none; }
+.choice.selected { box-shadow: inset 0 -4px 0 var(--jj2-rust); }
+.tool-card--featured { box-shadow: inset 0 4px 0 var(--jj2-rust) !important; }
+.tool-card--featured .tool-card__icon { background: var(--jj2-rust); color: var(--jj2-forest); }

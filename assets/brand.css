@@ -239,3 +239,13 @@ body.jj-site ::selection { color: var(--jj2-cream); background: var(--jj2-green)
 .jj-btn--outline-on-green { background: transparent; color: var(--jj2-cream); box-shadow: inset 0 0 0 1.5px var(--jj2-cream); }
 .jj-icon-tile { display: inline-grid; place-items: center; width: 40px; height: 40px; border-radius: var(--jj2-r-md); background: var(--jj2-green); color: var(--jj2-cream); flex: none; }
 .jj-icon-tile svg { width: var(--jj2-icon); height: var(--jj2-icon); stroke-width: var(--jj2-icon-stroke); }
+
+/* Rust accents (v2.1). Rust #D4712A never carries text on cream. Rust fills use forest text/icons: 5.3:1 contrast. */
+.jj-icon-tile--rust { background: var(--jj2-rust); color: var(--jj2-forest); }
+.jj-go:hover, .jj-req-card__go:hover, .tool-card__link:hover { text-decoration-thickness: 3px; text-decoration-color: var(--jj2-rust); }
+.jj-tool-nav__links a:not(.jj-tool-nav__cta):hover { box-shadow: inset 0 -3px 0 var(--jj2-rust); border-radius: 8px 8px 0 0; }
+.jj-tool-footer__group h3 { display: flex; align-items: center; gap: 8px; }
+.jj-tool-footer__group h3::before { content: ""; width: 16px; height: 3px; border-radius: 2px; background: var(--jj2-rust); }
+.jj-card--featured { box-shadow: inset 0 4px 0 var(--jj2-rust); }
+.jj-final h2::before { content: ""; display: block; width: 40px; height: 4px; margin-bottom: 14px; border-radius: 2px; background: var(--jj2-rust); }
+.jj-btn--outline-on-green:hover { box-shadow: inset 0 0 0 2px var(--jj2-rust); }
