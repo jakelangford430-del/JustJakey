@@ -97,17 +97,10 @@
     "/what-we-sort-out/",
     "/implementation-support/",
     "/website-setup/",
-    "/stop-doing-it-twice/",
     "/software-stack/",
-    "/workflow-order/",
-    "/business-sort-out-map/",
-    "/automation-opportunity-finder/",
     "/customer-journey-check/",
-    "/brand-colour-picker/",
-    "/business-thinking/",
     "/learning-hub/",
     "/ai-guide/",
-    "/google-workspace-for-sales/",
     "/people-hub/"
   ];
 

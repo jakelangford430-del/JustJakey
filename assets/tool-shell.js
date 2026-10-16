@@ -56,8 +56,9 @@
             '<a href="'+prefix+'what-we-sort-out/">What We Sort Out</a>'+
           '</div>'+
           '<div class="jj-tool-footer__group"><h3>Get things done</h3>'+
-            '<a href="'+prefix+'business-sort-out-map/">Business Sort-Out Map</a>'+
-            '<a href="'+prefix+'stop-doing-it-twice/">Stop Doing It Twice</a>'+
+            '<a href="'+prefix+'customer-journey-check/">Online Presence Audit</a>'+
+            '<a href="'+prefix+'software-stack/">No-BS Software Stack</a>'+
+            '<a href="'+prefix+'ai-guide/">The No-BS AI Guide</a>'+
             '<a href="'+prefix+'implementation-support/">Implementation Support</a>'+
             '<a href="'+prefix+'business-in-a-box/">Business in a Box</a>'+
           '</div>'+
