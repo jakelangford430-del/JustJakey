@@ -452,7 +452,7 @@ const initialiseAuth = async () => {
     const stashedError = readStash(OAUTH_ERROR_KEY);
     if (stashedError) setMessage(stashedError, "error");
     if (callback?.type === "confirmation") setMessage("Email confirmed. Your account is ready.", "success");
-    if (callback?.type === "oauth") setMessage("Google login sorted. Your dashboard is ready.", "success");
+    if (callback?.type === "oauth") setMessage("You're logged in with Google. Your dashboard is ready.", "success");
   } else {
     addAccountControls(user);
     if (callback?.type === "confirmation") showNotice("Email confirmed. You are now logged in.");

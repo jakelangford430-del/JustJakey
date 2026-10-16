@@ -12,20 +12,20 @@
 
   var style = document.createElement("style");
   style.textContent =
-    "#lsio-launch-banner{position:relative;z-index:999;background:#111813;color:#faf8f5;" +
+    "#lsio-launch-banner{position:relative;z-index:999;background:#2F4A39;color:#F5F0E6;" +
     "font-family:Inter,Arial,sans-serif;font-size:.85rem;line-height:1.4;" +
     "padding:12px 44px 12px 16px;display:flex;flex-wrap:wrap;gap:8px 16px;" +
     "align-items:center;justify-content:center;text-align:center;" +
     "border-bottom:2px solid #d4712a;}" +
     "#lsio-launch-banner strong{font-family:Antonio,\"Arial Narrow\",sans-serif;" +
-    "text-transform:uppercase;color:#d4712a;letter-spacing:.02em;}" +
-    "#lsio-launch-banner a.lsio-report{background:#d4712a;color:#fff;text-decoration:none;" +
+    "text-transform:uppercase;color:#F5F0E6;letter-spacing:.02em;}" +
+    "#lsio-launch-banner a.lsio-report{background:#F5F0E6;color:#2F4A39;text-decoration:none;" +
     "font-family:Antonio,\"Arial Narrow\",sans-serif;text-transform:uppercase;" +
     "font-size:.78rem;font-weight:700;padding:6px 14px;border-radius:3px;" +
     "white-space:nowrap;display:inline-block;}" +
     "#lsio-launch-banner a.lsio-report:hover{background:#b85c20;}" +
     "#lsio-launch-banner .lsio-close{position:absolute;right:10px;top:50%;" +
-    "transform:translateY(-50%);background:none;border:none;color:rgba(250,248,245,.7);" +
+    "transform:translateY(-50%);background:none;border:none;color:rgba(245,240,230,.7);" +
     "font-size:1.3rem;line-height:1;cursor:pointer;padding:6px 8px;}" +
     "#lsio-launch-banner .lsio-close:hover{color:#fff;}" +
     "@media(max-width:600px){#lsio-launch-banner{font-size:.78rem;padding:12px 40px 12px 12px;}}";

@@ -53,7 +53,8 @@
     "description": "Find the real bottleneck across customers, admin, people, systems, money, risk and training.",
     "href": "/business-sort-out-map/",
     "category": "Process",
-    "publishedAt": "2026-07-31"
+    "publishedAt": "2026-07-31",
+    "status": "soon"
   },
   {
     "slug": "automation-opportunity-finder",
@@ -61,7 +62,8 @@
     "description": "Check whether a repeated admin task should be automated, simplified, supported by AI or kept human.",
     "href": "/automation-opportunity-finder/",
     "category": "Automation",
-    "publishedAt": "2026-07-31"
+    "publishedAt": "2026-07-31",
+    "status": "soon"
   },
   {
     "slug": "workflow-order",
@@ -69,7 +71,8 @@
     "description": "Turn a messy list of problems into a sensible order of attack.",
     "href": "/workflow-order/",
     "category": "Process",
-    "publishedAt": "2026-07-31"
+    "publishedAt": "2026-07-31",
+    "status": "soon"
   },
   {
     "slug": "stop-doing-it-twice",
@@ -77,7 +80,8 @@
     "description": "Estimate the time and cost of repeated admin, then name the first task worth simplifying.",
     "href": "/stop-doing-it-twice/",
     "category": "Time saving",
-    "publishedAt": "2026-07-31"
+    "publishedAt": "2026-07-31",
+    "status": "soon"
   },
   {
     "slug": "software-stack",
@@ -93,7 +97,8 @@
     "description": "A five-level guided walkthrough for BDR, appointment setting and sales roles, with ready-to-use Gemini prompts.",
     "href": "/google-workspace-for-sales/",
     "category": "AI",
-    "publishedAt": "2026-07-31"
+    "publishedAt": "2026-07-31",
+    "status": "soon"
   },
   {
     "slug": "business-thinking",
@@ -101,7 +106,8 @@
     "description": "Use SWOT, PESTEL, Five Whys and other simple models to think through a business problem.",
     "href": "/business-thinking/",
     "category": "Decision making",
-    "publishedAt": "2026-07-31"
+    "publishedAt": "2026-07-31",
+    "status": "soon"
   },
   {
     "slug": "customer-journey-check",
@@ -125,15 +131,8 @@
     "description": "Build a simple colour palette for a website, documents and social posts without overthinking the brand.",
     "href": "/brand-colour-picker/",
     "category": "Brand",
-    "publishedAt": "2026-07-31"
-  },
-  {
-    "slug": "business-in-a-box",
-    "title": "Business in a Box",
-    "description": "Work through the foundations in a sensible order before adding more moving parts.",
-    "href": "/business-in-a-box/",
-    "category": "Get help",
-    "publishedAt": "2026-07-31"
+    "publishedAt": "2026-07-31",
+    "status": "soon"
   },
   {
     "slug": "people-hub/one-on-one",

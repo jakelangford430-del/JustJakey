@@ -119,7 +119,7 @@ const loadDashboard = async () => {
     const memberData = await memberResponse.json();
     const catalogue = await contentResponse.json();
     renderResults(memberData.results || []);
-    renderContent(catalogue || [], memberData.contentViews || []);
+    renderContent((catalogue || []).filter((item) => item.status !== 'soon'), memberData.contentViews || []);
   } catch {
     showDashboardError('Your dashboard could not load. Refresh the page, and if it is still being difficult, tell Jake.');
   }

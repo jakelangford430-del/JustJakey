@@ -1,0 +1,74 @@
+server {
+    listen       ${PORT};
+    listen       [::]:${PORT};
+    server_name  _;
+    root         /usr/share/nginx/html;
+    index        index.html;
+
+    server_tokens off;
+    absolute_redirect off;   # keep redirects relative so they work behind a proxy / TLS
+    port_in_redirect off;
+
+    # gzip
+    gzip on;
+    gzip_vary on;
+    gzip_comp_level 6;
+    gzip_min_length 512;
+    gzip_proxied any;
+    gzip_types text/plain text/css text/xml application/xml application/json
+               application/javascript text/javascript application/manifest+json
+               image/svg+xml application/rss+xml;
+
+    error_page 404 /404.html;
+
+    # ---- _redirects: 301 permanent ----
+    location ~ ^/business-in-a-box(/.*)?$ { return 301 /implementation-support/; }
+    location = /how-jake-helps/       { return 301 /what-we-sort-out/; }
+    location = /services/             { return 301 /what-we-sort-out/; }
+    location = /systems-setup/        { return 301 /what-we-sort-out/; }
+    location = /more-resources/       { return 301 /free-tools/; }
+    location = /business-mini-audit/  { return 301 /free-tools/; }
+    location = /chatgpt-guide         { return 301 /ai-guide/; }
+    location = /chatgpt-guide/        { return 301 /ai-guide/; }
+    location = /about/                { return 301 /#jake; }
+    location = /faq/                  { return 301 /#faqs; }
+
+    # ---- _redirects: 302 coming-soon tools (pages kept in repo) ----
+    location ~ ^/(brand-colour-picker|stop-doing-it-twice|workflow-order|automation-opportunity-finder|business-sort-out-map|google-workspace-for-sales|business-thinking)(/.*)?$ {
+        return 302 /free-tools/?soon=$1;
+    }
+
+    # Netlify functions / Identity do not exist here.
+    location ^~ /api/              { include /etc/nginx/snippets/security-headers.conf; return 404; }
+    location ^~ /.netlify/         { include /etc/nginx/snippets/security-headers.conf; return 404; }
+
+    # Never serve repo/build files that slipped into the image.
+    location ~ (^|/)\.            { return 404; }
+    location ~ ^/(netlify|src|docker|Dockerfile|netlify\.toml|_redirects|_headers|package(-lock)?\.json|deno\.lock|tailwind\.config\.js|[A-Z_]+\.md|seo-implementation-report\.json)(/|$) { return 404; }
+
+    # ---- static assets: long cache (mirrors _headers /assets/*) ----
+    location ^~ /assets/ {
+        include /etc/nginx/snippets/security-headers.conf;
+        add_header Cache-Control "public, max-age=31536000, immutable" always;
+        try_files $uri =404;
+    }
+
+    location ~* \.(?:png|jpe?g|gif|webp|avif|svg|ico|woff2?)$ {
+        include /etc/nginx/snippets/security-headers.conf;
+        add_header Cache-Control "public, max-age=604800" always;
+        try_files $uri =404;
+    }
+
+    location = /404.html {
+        include /etc/nginx/snippets/security-headers.conf;
+        add_header Cache-Control "no-cache" always;
+        internal;
+    }
+
+    # ---- pages: clean URLs (folder/index.html), HTML always revalidated ----
+    location / {
+        include /etc/nginx/snippets/security-headers.conf;
+        add_header Cache-Control "no-cache" always;
+        try_files $uri $uri/ =404;
+    }
+}
