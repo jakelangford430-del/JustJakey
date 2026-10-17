@@ -102,7 +102,7 @@
     "/people-hub/"
   ];
 
-  const hasPageSupportPath = document.querySelector(".cta, .final-cta, .feedback-section, .result-connect, #cta-block, main a[href*='tally.so/r/Bz5xN7']");
+  const hasPageSupportPath = document.querySelector(".cta, .final-cta, .feedback-section, .result-connect, #cta-block, main a[href^='/contact/']");
   if (!hasPageSupportPath && !document.querySelector(".lsio-support-strip") && supportStripPaths.some((item) => path.startsWith(item))) {
     const supportStrip = document.createElement("section");
     supportStrip.className = "lsio-support-strip";
@@ -114,7 +114,7 @@
           <p>Send Jake the problem. He can help turn the tool output into a cleaner process, training guide, automation, website fix or setup that actually gets used.</p>
         </div>
         <div class="lsio-support-strip__actions">
-          <a href="https://tally.so/r/Bz5xN7">Review My Business</a>
+          <a href="/contact/">Review My Business</a>
           <a href="https://wa.me/61472544399?text=Hi%20Jake%2C%20I%20used%20a%20Let%27s%20Sort%20It%20Out%20tool%20and%20want%20help%20turning%20it%20into%20action." rel="noopener noreferrer" target="_blank">Message Jake</a>
         </div>
       </div>`;
