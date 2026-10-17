@@ -42,12 +42,34 @@
     links.addEventListener('click',event=>{if(event.target.closest('a')){links.classList.remove('open');button.setAttribute('aria-expanded','false')}});
   }
 
+  // Newsletter (Tally xVxlVG) in the shared footer. Styles are inlined here because
+  // /assets/*.css is served with a 1-year immutable cache and this file is versioned.
+  const NEWS_CSS='.jj-tool-footer__news { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr); gap: 24px 40px; align-items: start; margin: 0 0 28px; padding: 24px 28px; border-radius: 18px; background: var(--jj2-cream); color: var(--jj2-forest); } .jj-tool-footer__news h2 { margin: 0 0 6px; color: var(--jj2-green); font: 700 28px/1.05 var(--jj2-font-display); text-transform: uppercase; } .jj-tool-footer__news p { margin: 0; color: var(--jj2-muted); font-size: 14.5px; line-height: 1.55; } .jj-tool-footer .jj-tool-footer__news a { color: var(--jj2-green); min-height: 0; display: inline; } .jj-tool-footer__news .jj-tally iframe { display: block; width: 100%; min-height: 180px; border: 0; } .jj-tool-footer__news .jj-tally__fallback { margin: 8px 0 0; font-size: 13px; color: var(--jj2-muted); } .jj-tool-footer .jj-tool-footer__news .jj-tally__fallback a { text-decoration: underline; text-decoration-color: var(--jj2-rust); text-decoration-thickness: 2px; text-underline-offset: 3px; } @media (max-width: 860px) { .jj-tool-footer__news { grid-template-columns: 1fr; padding: 20px; gap: 8px; } .jj-tool-footer__news h2 { font-size: 24px; } }';
+  const onNewsletterPage=/^\/newsletter\/?$/.test(window.location.pathname);
+  function newsletterHTML(){
+    if(onNewsletterPage) return '';
+    return '<section class="jj-tool-footer__news" aria-labelledby="jj-news-title">'+
+      '<div><h2 id="jj-news-title">The Just Jakey newsletter</h2><p>A short email now and then. <a href="/newsletter/">More about it</a>.</p></div>'+
+      '<div class="jj-tally" data-jj-form="newsletter" data-lazy data-height="230">'+
+        '<p class="jj-tally__fallback">Form not loading? <a href="https://tally.so/r/xVxlVG" target="_blank" rel="noopener">Open it on Tally</a> or email <a href="mailto:hello@justjakey.online">hello@justjakey.online</a>.</p>'+
+      '</div>'+
+    '</section>';
+  }
+  function loadNewsletter(){
+    if(onNewsletterPage) return;
+    if(!document.getElementById('jj-news-css')){const st=document.createElement('style');st.id='jj-news-css';st.textContent=NEWS_CSS;document.head.appendChild(st);}
+    if(window.jjTallyInit){window.jjTallyInit();return;}
+    if(document.querySelector('script[src^="/assets/forms/tally-embed.js"]')) return;
+    const s=document.createElement('script');s.src='/assets/forms/tally-embed.js?v=20261017';s.defer=true;document.body.appendChild(s);
+  }
+
   function buildFooter(){
     const oldFooter=document.querySelector('footer');
     const footer=document.createElement('footer');
     footer.className='jj-tool-footer';
     footer.innerHTML=
       '<div class="jj-tool-footer__inner">'+
+        newsletterHTML()+
         '<nav aria-label="Site links" class="jj-tool-footer__links">'+
           '<div class="jj-tool-footer__group"><h3>Explore</h3>'+
             '<a href="'+prefix+'learning-hub/">Learning Hub</a>'+
@@ -76,6 +98,7 @@
       '</div>';
     if(oldFooter) oldFooter.replaceWith(footer);
     else document.body.append(footer);
+    loadNewsletter();
   }
 
   buildNav();

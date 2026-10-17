@@ -88,4 +88,16 @@
     <loc>https://justjakey.online/contact/</loc>
     <priority>0.9</priority>
   </url>
+  <url>
+    <loc>https://justjakey.online/brief/</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://justjakey.online/onboard/</loc>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://justjakey.online/newsletter/</loc>
+    <priority>0.5</priority>
+  </url>
 </urlset>
