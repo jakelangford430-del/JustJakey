@@ -3,7 +3,7 @@ const saveTimers = new Map();
 
 const storageProfiles = {
   jj_workflow_order_v1: { toolSlug: 'workflow-order', title: 'Workflow Order' },
-  jj_business_sort_out_map_v1: { toolSlug: 'business-sort-out-map', title: 'Business Sort-Out Map' },
+  jj_business_sort_out_map_v1: { toolSlug: 'business-sort-out-map', title: 'Business Clarity Map' },
   jj_automation_finder_v1: { toolSlug: 'automation-opportunity-finder', title: 'Automation Opportunity Finder' },
   jj_audit_results: { toolSlug: 'customer-journey-check', title: 'Online Presence Audit' },
   jj_audited_tasks: { toolSlug: 'stop-doing-it-twice', title: 'Stop Doing It Twice' },

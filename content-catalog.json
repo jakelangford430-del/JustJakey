@@ -24,10 +24,10 @@
     "publishedAt": "2026-07-31"
   },
   {
-    "slug": "what-we-sort-out",
-    "title": "What We Sort Out",
+    "slug": "how-i-help",
+    "title": "How I Help",
     "description": "See the people, process, systems, software and online setup problems Jake can help untangle.",
-    "href": "/what-we-sort-out/",
+    "href": "/how-i-help/",
     "category": "Start here",
     "publishedAt": "2026-07-31"
   },
@@ -48,10 +48,10 @@
     "publishedAt": "2026-07-31"
   },
   {
-    "slug": "business-sort-out-map",
-    "title": "Business Sort-Out Map",
+    "slug": "business-clarity-map",
+    "title": "Business Clarity Map",
     "description": "Find the real bottleneck across customers, admin, people, systems, money, risk and training.",
-    "href": "/business-sort-out-map/",
+    "href": "/business-clarity-map/",
     "category": "Process",
     "publishedAt": "2026-07-31",
     "status": "soon"

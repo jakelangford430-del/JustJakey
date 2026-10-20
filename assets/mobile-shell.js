@@ -92,7 +92,7 @@
   const path = window.location.pathname.replace(/\/index\.html$/, "/");
   const supportStripPaths = [
     "/free-tools/",
-    "/what-we-sort-out/",
+    "/how-i-help/",
     "/implementation-support/",
     "/website-setup/",
     "/software-stack/",
@@ -115,7 +115,7 @@
         </div>
         <div class="lsio-support-strip__actions">
           <a href="/contact/">Review My Business</a>
-          <a href="https://wa.me/61472544399?text=Hi%20Jake%2C%20I%20used%20a%20Let%27s%20Sort%20It%20Out%20tool%20and%20want%20help%20turning%20it%20into%20action." rel="noopener noreferrer" target="_blank">Message Jake</a>
+          <a href="https://wa.me/61472544399?text=Hi%20Jake%2C%20I%20used%20a%20Just%20Jakey%20tool%20and%20want%20help%20turning%20it%20into%20action." rel="noopener noreferrer" target="_blank">Message Jake</a>
         </div>
       </div>`;
     const footer = document.querySelector("footer, .footer");
