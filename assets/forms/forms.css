@@ -1,0 +1,66 @@
+/* Form pages (/contact/, /brief/, /onboard/, /newsletter/, /connect/thanks/): Form A layout,
+   cream/orange (HANDOFF §10 Option B, scoped to these pages).
+   Rust is only a fill/bar here; never text on cream or card. */
+.jj-contact { --ct-rust-soft: #F3D9C2; --ct-on-rust: #111813; }
+.jj-contact .ct { padding: 64px 0 88px; }
+.jj-contact .ct__grid { display: grid; grid-template-columns: 1fr 1.05fr; gap: 56px; align-items: start; }
+.jj-contact .ct__intro h1 { margin: 16px 0; color: var(--jj2-green); font-size: 80px; line-height: .95; text-transform: uppercase; }
+.jj-contact .ct__lead { margin: 0 0 28px; color: var(--jj2-muted); font-size: 18px; line-height: 1.6; }
+.jj-contact .ct__who { margin: 0 0 24px; padding-left: 16px; border-left: 4px solid var(--jj2-rust); }
+.jj-contact .ct__who strong { display: block; color: var(--jj2-forest); font-size: 16px; font-weight: 600; }
+.jj-contact .ct__who span { color: var(--jj2-muted); font-size: 14px; }
+.jj-contact .ct__trust { display: grid; gap: 12px; margin: 0; padding: 0; list-style: none; }
+.jj-contact .ct__trust li { display: flex; align-items: center; gap: 10px; color: var(--jj2-forest); font-size: 15px; font-weight: 500; }
+.jj-contact .ct__trust li::before { content: "✓"; display: grid; place-items: center; flex: none; width: 24px; height: 24px; border-radius: 50%; background: var(--jj2-card); color: var(--jj2-green); font-size: 13px; font-weight: 700; }
+
+.jj-contact .ct__card { padding: 36px; border-radius: 24px; background: var(--jj2-white); box-shadow: 0 1px 0 #e4dccb, 0 20px 40px -24px rgba(17,24,19,.25); }
+.jj-contact .ct__card h2, .jj-contact .ct__done h2 { margin: 0 0 6px; color: var(--jj2-forest); font-size: 36px; line-height: 1.05; text-transform: uppercase; }
+.jj-contact .ct__sub { margin: 0 0 24px; color: var(--jj2-muted); font-size: 15px; }
+.jj-contact .ct__note { margin: 14px 0 0; color: var(--jj2-muted); font-size: 13px; line-height: 1.5; text-align: center; }
+.jj-contact .ct__note a { color: var(--jj2-green); text-decoration: underline; text-underline-offset: 3px; }
+.jj-contact .ct__alt { margin: 18px 0 0; padding-top: 18px; border-top: 1px solid #e4dccb; text-align: center; }
+.jj-contact .ct__alt a { display: inline; color: var(--jj2-green); font-size: 14px; font-weight: 600; text-decoration: none; }
+.jj-contact .ct__alt a:hover { text-decoration: underline; text-decoration-color: var(--jj2-rust); text-decoration-thickness: 2px; text-underline-offset: 5px; }
+.jj-contact .ct__alt svg { width: 16px; height: 16px; margin-left: 4px; vertical-align: -3px; }
+
+.jj-contact .ct__done { text-align: left; }
+.jj-contact .ct__done:focus { outline: none; }
+.jj-contact .ct__card.ct__done, .jj-contact .ct__card > .ct__done { border-top: 4px solid var(--jj2-rust); }
+.jj-contact .ct__card > .ct__done { margin: -36px; padding: 36px; border-radius: 24px; background: var(--ct-rust-soft); }
+.jj-contact .ct__done p { margin: 0 0 12px; color: var(--jj2-forest); font-size: 16px; line-height: 1.6; }
+.jj-contact .ct__done .ct__alt { border-top-color: rgba(17,24,19,.14); text-align: left; }
+.jj-contact .ct__tick { display: grid; place-items: center; width: 44px; height: 44px; margin-bottom: 16px; border-radius: 12px; background: var(--jj2-rust); color: var(--ct-on-rust); }
+.jj-contact .ct__tick svg { width: 22px; height: 22px; stroke-width: 2.5; }
+.jj-contact .ct__thanks { max-width: 640px; }
+.jj-contact .ct__thanks.jj-wrap { width: min(640px, calc(100% - 40px)); }
+.jj-contact .ct__card.ct__done { background: var(--ct-rust-soft); }
+.jj-contact .ct__card.ct__done h1 { margin: 12px 0; color: var(--jj2-green); font-size: 56px; line-height: 1; text-transform: uppercase; }
+
+@media (max-width: 860px) {
+  .ct { padding: 28px 0 56px; }
+  .jj-contact .ct__grid { grid-template-columns: 1fr; gap: 24px; }
+  .jj-contact .ct__intro h1 { font-size: 52px; }
+  .jj-contact .ct__lead { margin-bottom: 16px; font-size: 16px; }
+  .jj-contact .ct__who { margin-bottom: 0; }
+  .jj-contact .ct__trust { display: none; }
+  .jj-contact .ct__card { padding: 22px; }
+  .jj-contact .ct__card > .ct__done { margin: -22px; padding: 22px; }
+  .jj-contact .ct__card h2, .jj-contact .ct__done h2 { font-size: 30px; }
+  .jj-contact .ct__card.ct__done h1 { font-size: 44px; }
+}
+.jj-contact .ct__card { scroll-margin-top: 96px; }
+
+/* Tally embeds (official iframe, transparent background, dynamic height) */
+.jj-contact .ct__card--wide { max-width: none; }
+.jj-tally { position: relative; }
+.jj-tally iframe { display: block; width: 100%; min-height: 200px; border: 0; background: transparent; }
+.jj-tally__fallback { margin: 10px 0 0; color: var(--jj2-muted); font-size: 13px; line-height: 1.5; }
+.jj-tally__fallback a, .jj-contact .ct__note a { color: var(--jj2-green); text-decoration: underline; text-decoration-color: var(--jj2-rust); text-decoration-thickness: 2px; text-underline-offset: 3px; }
+.jj-contact .ct__card .jj-tally { margin: 0 -8px; }
+.jj-contact .ct__single { width: min(820px, calc(100% - 40px)); }
+.jj-contact .ct__single .ct__intro { margin-bottom: 28px; }
+.jj-contact .ct__single .ct__intro h1 { font-size: 72px; }
+.jj-contact .ct__steps { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 8px; padding: 0; list-style: none; }
+.jj-contact .ct__steps li { padding: 6px 12px; border-radius: 999px; background: var(--jj2-card); color: var(--jj2-green); font-size: 13px; font-weight: 600; }
+@media (max-width: 860px) { .jj-contact .ct__single .ct__intro h1 { font-size: 48px; } .jj-contact .ct__card .jj-tally { margin: 0 -4px; } }
+.jj-contact .ct__who a { color: var(--jj2-green); text-decoration: underline; text-decoration-color: var(--jj2-rust); text-decoration-thickness: 2px; text-underline-offset: 3px; }
