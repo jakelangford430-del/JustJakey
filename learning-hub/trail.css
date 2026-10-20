@@ -109,3 +109,16 @@ a.lh-stop{transition:transform .16s ease}a.lh-stop:hover{transform:translateY(-3
   .lh-step{grid-template-columns:52px minmax(0,1fr);gap:14px}.lh-step__n{width:50px;height:50px;font-size:21px}.lh-step h3{font-size:24px}.lh-shot{height:120px}
   .lh-fin h2{font-size:24px}
 }
+/* Launch modules (20 Oct 2026): no screenshot panels until real screenshots exist */
+.lh-steps__h,.lh-lesson h2{font-size:32px;margin:0 0 16px}
+.lh-lesson{margin-top:34px;padding-top:6px;scroll-margin-top:20px}
+.lh-lesson h2{display:flex;align-items:center;gap:14px}
+.lh-lesson__n{flex:none;width:50px;height:50px;border-radius:50%;background:#2F4A39;color:#F5F0E6;display:grid;place-items:center;font-size:22px}
+.lh-steps-wrap{scroll-margin-top:20px}
+.lh-step p{margin:4px 0 0!important}
+.lh-note{margin-top:16px!important;padding:16px 20px;border-radius:14px;background:#ECE5D6}
+.lh-qw p{color:#F5F0E6}
+.lh-list{margin:0;padding-left:20px}.lh-list li+li{margin-top:8px}
+a.lh-les{text-decoration:none;min-height:56px}a.lh-les:hover{background:#E2D9C6}a.lh-les.now:hover{background:#2F4A39}
+.lh-fin{margin-top:34px}
+@media (max-width:700px){.lh-steps-wrap,.lh-lesson{order:3}.lh-lesson{margin-top:0}.lh-steps__h,.lh-lesson h2{font-size:26px}}

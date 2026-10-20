@@ -21,7 +21,7 @@
           if(live){card.removeAttribute('aria-disabled');card.href=card.dataset.href||card.getAttribute('href');}
           else{card.dataset.href=card.dataset.href||card.getAttribute('href');card.removeAttribute('href');card.setAttribute('aria-disabled','true');}
         }
-        card.dataset.base=live?(card.dataset.lessons+' '+LABEL[level]+' lessons'):'Coming soon';
+        card.dataset.base=live?(card.dataset.lessons+' '+LABEL[level]+(card.dataset.lessons==='1'?' lesson':' lessons')):'Coming soon';
         meta.textContent=card.dataset.base;
       });
       paint();
