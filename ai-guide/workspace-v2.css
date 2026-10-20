@@ -364,7 +364,10 @@ body.jj-site svg { width: 20px; height: 20px; }
   justify-content: space-between;
   gap: 24px;
 }
-.voice-builder-heading h1 {
+.voice-builder-heading h1,
+.voice-builder-heading h2 {
+  font-family: var(--jj2-font-display, "Antonio", sans-serif);
+  font-weight: 700;
   margin: 0;
   color: #111813;
   font-size: clamp(2.6rem, 5vw, 4.3rem);
@@ -532,7 +535,7 @@ body.jj-site svg { width: 20px; height: 20px; }
   .voice-builder-panel,
   .voice-result-panel { padding: 24px 18px; }
   .voice-builder-heading { flex-direction: column; }
-  .voice-builder-heading h1 { font-size: clamp(2.7rem, 13vw, 4rem); overflow-wrap: anywhere; }
+  .voice-builder-heading h1, .voice-builder-heading h2 { font-size: clamp(2.7rem, 13vw, 4rem); overflow-wrap: anywhere; }
   .voice-rule-grid { grid-template-columns: 1fr; }
   .voice-step-actions { align-items: stretch; flex-direction: column-reverse; }
   .voice-step-actions .ai-action-button { width: 100%; }
