@@ -521,5 +521,5 @@
       const savedWhys = readSaved(`${SAVE_PREFIX}five-whys`, `${OLD_SAVE_PREFIX}five-whys`);
       if (savedWhys) { try { Object.entries(JSON.parse(savedWhys)).forEach(([key, value]) => { if (whyForm.elements[key]) whyForm.elements[key].value = value; }); document.getElementById("why-save-status").textContent = "Saved answers restored."; } catch (error) { /* Ignore an old or malformed local save. */ } }
     </script>
-<script src="../assets/tool-shell.js?v=20261020-forms"></script><script src="/assets/mobile-shell.js"></script><script src="/assets/auth.js" type="module"></script></body>
+<script src="../assets/tool-shell.js?v=20261020-trail"></script><script src="/assets/mobile-shell.js"></script><script src="/assets/auth.js" type="module"></script></body>
 </html>

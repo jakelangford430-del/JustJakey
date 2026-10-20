@@ -26,7 +26,7 @@
     const saveExitBtn=oldHeader?oldHeader.querySelector('#save-exit'):null;
 
     const nav=document.createElement('nav');nav.className='jj-tool-nav';nav.setAttribute('aria-label','Main navigation');
-    nav.innerHTML='<div class="jj-tool-nav__inner"><a class="jj-tool-nav__brand" href="'+prefix+'"><img src="/assets/brand/jj-mark.svg" width="36" height="36" alt="">JUST JAKEY</a><button class="jj-tool-nav__menu" type="button" aria-expanded="false" aria-controls="jj-tool-links">Menu</button><div id="jj-tool-links" class="jj-tool-nav__links"><a href="'+prefix+'what-we-sort-out/">What We Sort Out</a><a href="'+prefix+'free-tools/">Free Tools</a><a href="'+prefix+'learning-hub/">Learning Hub</a><a href="'+prefix+'people-hub/">People Hub</a><a href="'+prefix+'implementation-support/">Implementation Support</a><a class="jj-tool-nav__cta" href="/contact/">Review my business</a></div></div>';
+    nav.innerHTML='<div class="jj-tool-nav__inner"><a class="jj-tool-nav__brand" href="'+prefix+'"><img src="/assets/brand/jj-mark.svg?v=20261020" width="36" height="36" alt="">JUST JAKEY</a><button class="jj-tool-nav__menu" type="button" aria-expanded="false" aria-controls="jj-tool-links">Menu</button><div id="jj-tool-links" class="jj-tool-nav__links"><a href="'+prefix+'what-we-sort-out/">What We Sort Out</a><a href="'+prefix+'free-tools/">Free Tools</a><a href="'+prefix+'learning-hub/">Learning Hub</a><a href="'+prefix+'people-hub/">People Hub</a><a href="'+prefix+'implementation-support/">Implementation Support</a><a class="jj-tool-nav__cta" href="/contact/">Review my business</a></div></div>';
     const here=window.location.pathname;nav.querySelectorAll('.jj-tool-nav__links a:not(.jj-tool-nav__cta)').forEach(a=>{const u=new URL(a.getAttribute('href'),window.location.href).pathname;if(u!=='/'&&here.startsWith(u))a.setAttribute('aria-current','page')});
     if(target) target.replaceWith(nav);
     else document.body.prepend(nav);
@@ -92,7 +92,7 @@
           '</div>'+
         '</nav>'+
         '<div class="jj-tool-footer__bottom">'+
-          '<a class="jj-tool-footer__brand" href="'+prefix+'" aria-label="Just Jakey home"><img src="/assets/brand/jj-mark.svg" width="36" height="36" alt=""><span><span class="jj-tool-footer__name">JUST JAKEY</span><span class="jj-tool-footer__slogan">Friendly help for launches and small-to-medium projects.</span></span></a>'+
+          '<a class="jj-tool-footer__brand" href="'+prefix+'" aria-label="Just Jakey home"><img src="/assets/brand/jj-mark.svg?v=20261020" width="36" height="36" alt=""><span><span class="jj-tool-footer__name">JUST JAKEY</span><span class="jj-tool-footer__slogan">Friendly help for launches and small-to-medium projects.</span></span></a>'+
           '<span>© 2026 Just Jakey · <a href="'+prefix+'privacy/">Privacy Policy</a></span>'+
         '</div>'+
       '</div>';
