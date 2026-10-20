@@ -1,0 +1,46 @@
+/* Homepage "Meet Jake" section, Direction B "How I learnt" (Dina, approved by Jake 21 Oct 2026) */
+.mj{font:400 18px/1.6 var(--jj2-font-body,"Inter",Arial,sans-serif);color:#111813;background:#F5F0E6;scroll-margin-top:24px}
+.mj *{box-sizing:border-box}
+.mj h2,.mj h3,.mj h4{font-family:var(--jj2-font-display,"Antonio",sans-serif);font-weight:700;line-height:1.02;text-transform:uppercase;color:#2F4A39;margin:0;letter-spacing:0}
+.mj p{margin:0}
+.mj__wrap{max-width:1240px;margin:0 auto;padding:0 56px}
+.mj__hero{background:#111813;color:#F5F0E6}
+.mj__hero-in{padding:80px 0 64px;display:grid;grid-template-columns:auto 1fr;gap:48px;align-items:center}
+.mj__mark{width:200px;height:200px;border-radius:28px;background:#2F4A39;display:grid;place-items:center}.mj__mark svg{width:70%;height:auto}
+.mj__eye{display:inline-flex;align-items:center;gap:10px;font:700 16px/1.2 var(--jj2-font-body,Inter,sans-serif);letter-spacing:.14em;text-transform:uppercase;color:#F5F0E6}
+.mj__eye::before{content:"";width:9px;height:9px;border-radius:50%;background:#D4712A}
+.mj .mj__hero h2{color:#F5F0E6;font-size:80px;margin:14px 0}
+.mj__lead{font-size:22px;max-width:760px;color:#F5F0E6}
+.mj__facts{display:flex;gap:10px;flex-wrap:wrap;margin:22px 0 0;padding:0;list-style:none}
+.mj__facts li{background:#2F4A39;color:#F5F0E6;border-radius:99px;padding:8px 18px;font-size:18px;font-weight:600}
+.mj__body{padding:72px 0 88px}
+.mj__body .mj__wrap>h3{font-size:44px;margin-bottom:24px}
+.mj__trail{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin:0;padding:0;list-style:none}
+.mj__stop{background:#ECE5D6;border-radius:20px;padding:28px;display:flex;flex-direction:column;gap:10px}
+.mj__badge{position:relative;width:58px;height:58px;border-radius:50%;background:#2F4A39;color:#F5F0E6;display:grid;place-items:center;font:700 24px/1 var(--jj2-font-display,Antonio,sans-serif)}
+.mj__k{font:700 16px/1.2 var(--jj2-font-body,Inter,sans-serif);letter-spacing:.12em;text-transform:uppercase;color:#2F4A39}
+.mj h4{font-size:32px;line-height:1.05}
+.mj__stop.here{background:#2F4A39;color:#F5F0E6}.mj__stop.here h4,.mj__stop.here .mj__k{color:#F5F0E6}.mj__stop.here .mj__badge{background:#F5F0E6;color:#2F4A39}
+.mj__stop.here .mj__badge::after{content:"";position:absolute;right:-2px;top:-2px;width:16px;height:16px;border-radius:50%;background:#D4712A;border:3px solid #2F4A39}
+.mj__means{margin-top:40px;display:grid;grid-template-columns:.9fr 1.1fr;gap:40px;background:#2F4A39;color:#F5F0E6;border-radius:24px;padding:44px}
+.mj .mj__means h3{color:#F5F0E6;font-size:48px}
+.mj__sub{margin:12px 0 24px!important;color:#F5F0E6}
+.mj__ctas{display:flex;gap:12px;flex-wrap:wrap}
+.mj__btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:16px 28px;border-radius:12px;font:700 18px/1.2 var(--jj2-font-body,Inter,sans-serif);text-decoration:none;background:#F5F0E6;color:#2F4A39!important}
+.mj__btn:hover{background:#ECE5D6}
+.mj__btn--ghost{background:transparent;color:#F5F0E6!important;box-shadow:inset 0 0 0 2px #F5F0E6}.mj__btn--ghost:hover{background:#253D2F}
+.mj__btn:focus-visible{outline:3px solid #F5F0E6;outline-offset:3px}
+.mj__list{list-style:none;margin:0;padding:0;display:grid;gap:14px}
+.mj__list li{background:#F5F0E6;color:#111813;border-radius:14px;padding:16px 20px}.mj__list strong{color:#2F4A39}
+@media (max-width:1000px){.mj .mj__hero h2{font-size:64px}.mj__trail{grid-template-columns:1fr}.mj__means{grid-template-columns:1fr}}
+@media (max-width:700px){
+  .mj__wrap{padding:0 20px}
+  .mj__hero-in{grid-template-columns:1fr;gap:22px;padding:48px 0 40px}
+  .mj__mark{width:120px;height:120px;border-radius:20px}
+  .mj .mj__hero h2{font-size:52px}.mj__lead{font-size:19px}
+  .mj__facts li{font-size:16px}
+  .mj__body{padding:44px 0 56px}.mj__body .mj__wrap>h3{font-size:34px}
+  .mj__trail{gap:12px}.mj__stop{padding:22px}.mj h4{font-size:28px}
+  .mj__means{gap:20px;padding:26px}.mj .mj__means h3{font-size:36px}
+  .mj__btn{width:100%}
+}
