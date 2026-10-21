@@ -1,4 +1,7 @@
 User-agent: *
 Allow: /
+Disallow: /account/
+Disallow: /connect/thanks/
+Disallow: /onboard/
 
 Sitemap: https://justjakey.online/sitemap.xml
