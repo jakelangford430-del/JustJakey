@@ -1,18 +1,23 @@
 /business-in-a-box/    /implementation-support/   301
 /business-in-a-box/*   /implementation-support/   301
 /business-in-a-box     /implementation-support/   301
+# Renamed 20 Oct 2026 (no "sort" wording)
+/what-we-sort-out      /how-i-help/            301
+/what-we-sort-out/*    /how-i-help/            301
+/business-sort-out-map    /business-clarity-map/  301
+/business-sort-out-map/*  /business-clarity-map/  301
 # Coming-soon tools (temporary, pages kept in repo)
 /brand-colour-picker/*            /free-tools/?soon=brand-colour-picker   302
 /stop-doing-it-twice/*            /free-tools/?soon=stop-doing-it-twice   302
 /workflow-order/*                 /free-tools/?soon=workflow-order   302
 /automation-opportunity-finder/*  /free-tools/?soon=automation-opportunity-finder   302
-/business-sort-out-map/*          /free-tools/?soon=business-sort-out-map   302
+/business-clarity-map/*           /free-tools/?soon=business-clarity-map   302
 /google-workspace-for-sales/*     /free-tools/?soon=google-workspace-for-sales   302
 /business-thinking/*              /free-tools/?soon=business-thinking   302
 # People Hub: held, Jake to confirm
-/how-jake-helps/   /what-we-sort-out/   301
-/services/         /what-we-sort-out/   301
-/systems-setup/    /what-we-sort-out/   301
+/how-jake-helps/   /how-i-help/         301
+/services/         /how-i-help/         301
+/systems-setup/    /how-i-help/         301
 /more-resources/   /free-tools/         301
 /business-mini-audit/ /free-tools/       301
 /chatgpt-guide/    /ai-guide/           301

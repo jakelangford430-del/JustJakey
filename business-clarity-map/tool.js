@@ -431,9 +431,9 @@ function renderResult() {
   showView("result-view");
   save();
   if (typeof window.trackToolCompletion === "function") {
-    window.trackToolCompletion("Business Sort-Out Map", { priority: first.label, scores });
+    window.trackToolCompletion("Business Clarity Map", { priority: first.label, scores });
   }
-  window.LSIO_MEMBER?.saveResult?.({ priority: first.label, scores, answers: state.answers }, { toolSlug: "business-sort-out-map", title: "Business Sort-Out Map", status: "completed" });
+  window.LSIO_MEMBER?.saveResult?.({ priority: first.label, scores, answers: state.answers }, { toolSlug: "business-sort-out-map", title: "Business Clarity Map", status: "completed" });
 }
 
 function next() {
@@ -469,7 +469,7 @@ async function copy(text) {
 
 function planText() {
   const { scores, ranking, firstKey, secondKey, thirdKey, first } = resultData();
-  return `BUSINESS SORT-OUT MAP
+  return `BUSINESS CLARITY MAP
 
 Top bottleneck: ${first.label}
 Why: ${first.why}
