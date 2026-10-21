@@ -46,3 +46,29 @@ h3,h4,.jj-home h3{font-weight:400!important}
 .jj-tool-footer .jj-tool-footer__news,.jj-tool-footer .jj-tool-footer__news *{color:#111813!important}
 .jj-hero .jj-panel .jj-eyebrow{color:#F5F0E6!important}.jj-hero .jj-opt a svg{color:#D4712A!important;stroke:#D4712A!important}
 .jj-final{border-top:1px solid rgba(245,240,230,.15)}
+/* v3 (Jake 21 Oct): seamless dark nav + hero, cream components floating on black */
+body.jj-site .jj-tool-nav,body.jj-site > nav.jj-tool-nav{background:#111813!important;border-bottom:0!important;box-shadow:none!important}
+body.jj-site .jj-tool-nav__links a:not(.jj-tool-nav__cta){color:#F5F0E6!important}
+body.jj-site .jj-tool-nav__links a[aria-current]{color:#FFFFFF!important;text-decoration:underline;text-decoration-color:#D4712A;text-underline-offset:6px}
+body.jj-site .jj-tool-nav__brand{color:#FFFFFF!important}
+body.jj-site .jj-tool-nav__brand img{box-shadow:0 0 0 1px rgba(245,240,230,.5)!important}
+body.jj-site .jj-tool-nav__links.open{background:#111813!important}
+/* Any hero photo fades into the black: no box, soft edges */
+.jj-hero img,.jj-hero picture{border:0!important;border-radius:0!important;box-shadow:none!important;-webkit-mask-image:linear-gradient(to right,transparent 0,#000 30%),linear-gradient(to top,transparent 0,#000 30%);-webkit-mask-composite:source-in;mask-image:linear-gradient(to right,transparent 0,#000 30%),linear-gradient(to top,transparent 0,#000 30%);mask-composite:intersect}
+@media(max-width:600px){.jj-hero img,.jj-hero picture{-webkit-mask-image:linear-gradient(to top,transparent 0,#000 40%);mask-image:linear-gradient(to top,transparent 0,#000 40%)}}
+/* Soft warm glow behind the hero so the black has depth */
+.jj-hero{background:radial-gradient(900px 520px at 78% 40%,rgba(47,74,57,.45),transparent 70%),#111813!important}
+/* "What's doing your head in?" panel: cream card on black */
+.jj-hero .jj-panel{background:#F5F0E6!important;color:#111813!important;border:0!important;box-shadow:0 30px 60px -30px rgba(0,0,0,.6)!important}
+.jj-hero .jj-panel h2{color:#111813!important;font-weight:700!important}
+.jj-hero .jj-panel p{color:#3a4a3f!important}
+.jj-hero .jj-panel .jj-eyebrow{color:#2F4A39!important}
+.jj-hero .jj-opt a{background:#ECE5D6!important;color:#111813!important}
+.jj-hero .jj-opt a:hover{background:#E2D8C4!important}
+.jj-hero .jj-opt a svg{color:#D4712A!important;stroke:#D4712A!important}
+/* Footer near-black (beats brand.css body.jj-site > footer) */
+body.jj-site > footer.jj-tool-footer,body.jj-site footer.jj-tool-footer{background:#111813!important;color:#F5F0E6!important;border-top:1px solid rgba(245,240,230,.12)!important}
+body.jj-site footer.jj-tool-footer h3,body.jj-site footer.jj-tool-footer .jj-tool-footer__name{color:#FFFFFF!important;font-weight:700!important}
+body.jj-site footer.jj-tool-footer a{color:#F5F0E6!important}
+body.jj-site footer.jj-tool-footer .jj-tool-footer__news,body.jj-site footer.jj-tool-footer .jj-tool-footer__news *{color:#111813!important}
+body.jj-site footer.jj-tool-footer .jj-tool-footer__news h2{font-weight:700!important}
