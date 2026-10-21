@@ -28,3 +28,19 @@ h3,h4,.jj-home h3{font-weight:400!important}
  .jj-cta .jj-btn,.final-inner .button{width:100%}
 }
 .jj-tool-nav .jj-tool-nav__links a.jj-tool-nav__cta,.jj-tool-nav .jj-tool-nav__links a.jj-tool-nav__cta *{color:#F5F0E6!important;-webkit-text-fill-color:#F5F0E6!important}
+/* Dark accents (Jake, 21 Oct): near-black hero, FAQ, final CTA and footer with bold white type */
+.jj-hero,#faqs,.jj-final,.jj-tool-footer{background:#111813!important;color:#F5F0E6!important}
+.jj-hero h1,.jj-hero h2,#faqs h2,.jj-final h2{color:#FFFFFF!important;font-weight:700!important}
+.jj-hero h1{margin-top:0!important}
+.jj-hero p,.jj-hero li,.jj-hero .jj-lead,.jj-final p,#faqs p,#faqs summary{color:#F5F0E6!important}
+.jj-hero .jj-slogan,#faqs summary{color:#FFFFFF!important;font-weight:700}
+.jj-hero .jj-proof svg{color:#D4712A}
+#faqs .jj-eyebrow,.jj-final .jj-eyebrow{color:#F5F0E6!important}
+#faqs .jj-faq__item{border-color:rgba(245,240,230,.2)!important}
+.jj-hero .jj-btn--primary{background:#F5F0E6!important;color:#111813!important;box-shadow:none!important}
+.jj-hero .jj-btn--secondary,.jj-final .jj-btn{color:#F5F0E6!important;box-shadow:inset 0 0 0 1px #F5F0E6!important;background:transparent!important}
+.jj-hero .jj-panel{background:#1C251F!important;color:#F5F0E6!important}
+.jj-hero .jj-panel h2{color:#FFFFFF!important}.jj-hero .jj-panel p{color:#D9D3C6!important}
+.jj-hero .jj-opt a{background:#26312A!important;color:#FFFFFF!important}
+.jj-tool-footer a,.jj-tool-footer h3,.jj-tool-footer span{color:#F5F0E6!important}
+.jj-tool-footer .jj-tool-footer__news,.jj-tool-footer .jj-tool-footer__news *{color:#111813!important}
