@@ -1,3 +1,4 @@
+(function(){if(!document.querySelector('link[data-jj-premium]')){var l=document.createElement('link');l.rel='stylesheet';l.href='/assets/premium.css?v=20261021';l.setAttribute('data-jj-premium','');(document.readyState==='loading'?document.addEventListener('DOMContentLoaded',function(){document.head.appendChild(l)}):document.head.appendChild(l));}})();
 (function(){
   // Pages can opt into absolute (site-root) links instead of computed relative
   // ones — used by 404.html, which can be served at any URL depth regardless
