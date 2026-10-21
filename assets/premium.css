@@ -56,3 +56,56 @@ h3,h4,.jj-home h3{font-weight:400!important}
 .mj strong{color:#FFFFFF!important}
 
 #faqs{background:#F5F0E6!important;color:#111813!important}#faqs h2{color:#2F4A39!important}#faqs summary{color:#111813!important;font-weight:600}#faqs p{color:#3a4a3f!important}
+/* v5 spacing + alignment pass. Scale: 8 / 16 / 24 / 40 / 64 / 96 */
+:root{--sp1:8px;--sp2:16px;--sp3:24px;--sp4:40px;--sp5:64px;--sp6:96px}
+/* Vertical rhythm: one section padding everywhere */
+.jj-sec,.mj__body,.jj-final,#faqs,.how-i-help-page .section,.final-cta,.support-process,.support-fit-section,.support-v2-cta,.lh-help{padding-top:var(--sp6)!important;padding-bottom:var(--sp6)!important}
+.section:not(.intro-band)+.section.split-section,.section.familiar+.section{padding-top:var(--sp6)}
+.support-chooser-section{padding-bottom:var(--sp6)!important}
+.lh-help{padding-left:var(--sp4)!important;padding-right:var(--sp4)!important}
+/* Headings: a touch more line-height, consistent gaps */
+h1{line-height:1.1!important}
+h2,.jj-home h2{line-height:1.18!important}
+h3,h4,.jj-home h3{line-height:1.25!important}
+.jj-eyebrow{display:inline-flex;margin-bottom:var(--sp2)!important}
+.jj-sh h2+p,.jj-sh p,h2+p,h1+p{margin-top:var(--sp2)!important}
+.jj-sh{margin-bottom:var(--sp4)!important;align-items:flex-end}
+.lh-leg h2{margin-bottom:var(--sp1)!important}
+.lh-leg>p{margin:0 0 var(--sp3)!important}
+.lh-legs{gap:var(--sp5)!important}
+/* Readable line lengths (~65-70 characters) */
+.jj-intro,.jj-guides__lead,.jj-lead,.jj-about p,#faqs .jj-faq,.section-intro,.final-cta p,.lh-jump,.lh-leg>p,.support-v2-cta p,.support-fit-section p,.support-chooser-section .jj-sh p,.support-chooser-section>div>p,.mj__lead,.ct__sub{max-width:68ch!important}
+.jj-card p,.jj-impl p,.lh-stop p{max-width:none}
+/* Cards: equal heights, links pinned to the bottom */
+.jj-cards{align-items:stretch!important}
+.jj-card{display:flex!important;flex-direction:column}
+.jj-card>a:last-child,.jj-card .jj-go:last-child{margin-top:auto}
+.lh-stops{align-items:stretch}
+/* Button rows: consistent gap, aligned baselines */
+.jj-cta,.final-actions,.support-v2-actions,.support-v2-cta__inner>div:last-child,.mj__ctas{display:flex!important;flex-wrap:wrap;gap:12px!important;align-items:center}
+.button{font-family:Inter,system-ui,sans-serif!important;text-transform:none!important;letter-spacing:0!important}
+/* How I help: final CTA buttons were green-on-green */
+.final-cta .button:not(.jj-solid){color:#F5F0E6!important;box-shadow:inset 0 0 0 1px #F5F0E6!important}
+.final-cta .button.button-primary{background:#F5F0E6!important;color:#2F4A39!important;box-shadow:none!important}
+.final-cta .final-actions{justify-content:flex-end}
+/* Typographic polish: no orphans, balanced headings */
+h1,h2,h3,h4{text-wrap:balance}
+p,li,summary{text-wrap:pretty}
+@media(max-width:600px){
+ .jj-sec,.mj__body,.jj-final,#faqs,.final-cta,.support-process,.support-fit-section,.support-v2-cta,.section{padding-top:var(--sp5)!important;padding-bottom:var(--sp5)!important}
+ .support-chooser-section{padding-bottom:var(--sp5)!important}
+ .lh-help{padding:var(--sp4) var(--sp3)!important}
+ .jj-sh{margin-bottom:var(--sp3)!important;align-items:flex-start}
+ .lh-legs{gap:var(--sp4)!important}
+ .jj-cta,.final-actions,.support-v2-actions,.mj__ctas{flex-direction:column;align-items:stretch}
+ .final-cta .final-actions{justify-content:stretch}
+ .jj-cta .jj-btn,.final-actions .button,.support-v2-actions .button,.mj__btn{width:100%;justify-content:center;text-align:center}
+}
+.lh-help{padding:56px var(--sp4)!important}
+@media(max-width:600px){.lh-help{padding:var(--sp4) var(--sp3)!important}}
+/* Shared support strip: calm outline buttons, aligned with the container */
+.lsio-support-strip{padding:var(--sp5) 0!important}
+.lsio-support-strip__actions{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.lsio-support-strip__actions a{border-radius:999px!important;background:transparent!important;color:#2F4A39!important;box-shadow:inset 0 0 0 1px #2F4A39!important;border:0!important;padding:12px 22px!important;font:500 15px/1.2 Inter,system-ui,sans-serif!important;text-transform:none!important;letter-spacing:0!important}
+.lsio-support-strip p{max-width:68ch}
+#implementation-help a:not(.jj-btn),#what-i-work-on a:not(.jj-btn),.mj a:not(.mj__btn){color:#F5F0E6!important;text-decoration-color:#D4712A}
