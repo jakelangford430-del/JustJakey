@@ -72,3 +72,13 @@ body.jj-site footer.jj-tool-footer h3,body.jj-site footer.jj-tool-footer .jj-too
 body.jj-site footer.jj-tool-footer a{color:#F5F0E6!important}
 body.jj-site footer.jj-tool-footer .jj-tool-footer__news,body.jj-site footer.jj-tool-footer .jj-tool-footer__news *{color:#111813!important}
 body.jj-site footer.jj-tool-footer .jj-tool-footer__news h2{font-weight:700!important}
+/* v4 (Jake 21 Oct): extra black sections alternating with cream */
+#implementation-help,#what-i-work-on,.mj,.mj__hero,.mj__body{background:#111813!important;color:#F5F0E6!important}
+#implementation-help h2,#implementation-help h3,#what-i-work-on h2,#what-i-work-on h3,.mj h2,.mj h3,.mj h4{color:#FFFFFF!important;font-weight:700!important}
+#implementation-help p,#implementation-help li,#what-i-work-on p,#what-i-work-on li,.mj p,.mj li,.mj__k,.mj__eye{color:#F5F0E6!important}
+#implementation-help .jj-eyebrow,#what-i-work-on .jj-eyebrow{color:#F5F0E6!important}
+#implementation-help .jj-impl,#what-i-work-on .jj-card,.mj__stop,.mj__list li,.mj__means{background:#1C251F!important;border-color:rgba(245,240,230,.12)!important;box-shadow:none!important}
+#implementation-help .jj-icon-tile{background:#26312A!important;color:#D4712A!important}
+#implementation-help .jj-btn,.mj__btn{color:#F5F0E6!important;box-shadow:inset 0 0 0 1px #F5F0E6!important;background:transparent!important}
+.mj__badge{background:#D4712A!important;color:#111813!important}
+.mj strong{color:#FFFFFF!important}
