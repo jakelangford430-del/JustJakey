@@ -27,3 +27,4 @@ h3,h4,.jj-home h3{font-weight:400!important}
  .jj-tool-nav__links.open a{font-size:20px;padding:14px 0}
  .jj-cta .jj-btn,.final-inner .button{width:100%}
 }
+.jj-tool-nav .jj-tool-nav__links a.jj-tool-nav__cta,.jj-tool-nav .jj-tool-nav__links a.jj-tool-nav__cta *{color:#F5F0E6!important;-webkit-text-fill-color:#F5F0E6!important}
