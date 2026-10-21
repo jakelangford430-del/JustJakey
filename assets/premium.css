@@ -29,14 +29,13 @@ h3,h4,.jj-home h3{font-weight:400!important}
 }
 .jj-tool-nav .jj-tool-nav__links a.jj-tool-nav__cta,.jj-tool-nav .jj-tool-nav__links a.jj-tool-nav__cta *{color:#F5F0E6!important;-webkit-text-fill-color:#F5F0E6!important}
 /* Dark accents (Jake, 21 Oct): near-black hero, FAQ, final CTA and footer with bold white type */
-.jj-hero,#faqs,.jj-final,.jj-tool-footer{background:#111813!important;color:#F5F0E6!important}
-.jj-hero h1,.jj-hero h2,#faqs h2,.jj-final h2{color:#FFFFFF!important;font-weight:700!important}
+.jj-hero,.jj-final,.jj-tool-footer{background:#111813!important;color:#F5F0E6!important}
+.jj-hero h1,.jj-hero h2,.jj-final h2{color:#FFFFFF!important;font-weight:700!important}
 .jj-hero h1{margin-top:0!important}
-.jj-hero p,.jj-hero li,.jj-hero .jj-lead,.jj-final p,#faqs p,#faqs summary{color:#F5F0E6!important}
-.jj-hero .jj-slogan,#faqs summary{color:#FFFFFF!important;font-weight:700}
+.jj-hero p,.jj-hero li,.jj-hero .jj-lead,.jj-final p{color:#F5F0E6!important}
+.jj-hero .jj-slogan{color:#FFFFFF!important;font-weight:700}
 .jj-hero .jj-proof svg{color:#D4712A}
-#faqs .jj-eyebrow,.jj-final .jj-eyebrow{color:#F5F0E6!important}
-#faqs .jj-faq__item{border-color:rgba(245,240,230,.2)!important}
+.jj-final .jj-eyebrow{color:#F5F0E6!important}
 .jj-hero .jj-btn--primary{background:#F5F0E6!important;color:#111813!important;box-shadow:none!important}
 .jj-hero .jj-btn--secondary,.jj-final .jj-btn{color:#F5F0E6!important;box-shadow:inset 0 0 0 1px #F5F0E6!important;background:transparent!important}
 .jj-hero .jj-panel{background:#1C251F!important;color:#F5F0E6!important}
@@ -45,7 +44,6 @@ h3,h4,.jj-home h3{font-weight:400!important}
 .jj-tool-footer a,.jj-tool-footer h3,.jj-tool-footer span{color:#F5F0E6!important}
 .jj-tool-footer .jj-tool-footer__news,.jj-tool-footer .jj-tool-footer__news *{color:#111813!important}
 .jj-hero .jj-panel .jj-eyebrow{color:#F5F0E6!important}.jj-hero .jj-opt a svg{color:#D4712A!important;stroke:#D4712A!important}
-.jj-final{border-top:1px solid rgba(245,240,230,.15)}
 /* v4 (Jake 21 Oct): extra black sections alternating with cream */
 #implementation-help,#what-i-work-on,.mj,.mj__hero,.mj__body{background:#111813!important;color:#F5F0E6!important}
 #implementation-help h2,#implementation-help h3,#what-i-work-on h2,#what-i-work-on h3,.mj h2,.mj h3,.mj h4{color:#FFFFFF!important;font-weight:700!important}
@@ -56,3 +54,5 @@ h3,h4,.jj-home h3{font-weight:400!important}
 #implementation-help .jj-btn,.mj__btn{color:#F5F0E6!important;box-shadow:inset 0 0 0 1px #F5F0E6!important;background:transparent!important}
 .mj__badge{background:#D4712A!important;color:#111813!important}
 .mj strong{color:#FFFFFF!important}
+
+#faqs{background:#F5F0E6!important;color:#111813!important}#faqs h2{color:#2F4A39!important}#faqs summary{color:#111813!important;font-weight:600}#faqs p{color:#3a4a3f!important}
